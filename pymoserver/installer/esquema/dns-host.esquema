@@ -1,26 +1,25 @@
-@       IN      SOA     NOMBRE_EQUIPO.DOMINIO_EQUIPO. root.DOMINIO_EQUIPO. (
-                        2002061100      ; Serial
+@       IN      SOA     NOMBRE_MAQUINA.DOMINIO_MAQUINA. root.DOMINIO_MAQUINA. (
+                        2005041100      ; Serial
                         8H              ; refresh, seconds
                         2H              ; retry, seconds
                         1W              ; expire, seconds
                         1D )            ; minimum, seconds
 ;
-		NS	NOMBRE_EQUIPO
+		NS	NOMBRE_MAQUINA
 		MX	10 smtp
 
-NOMBRE_EQUIPO	        A       IP_INTERNA
+NOMBRE_MAQUINA	        A       IP_INTERNA
 
-dns		CNAME   NOMBRE_EQUIPO
-www		CNAME	NOMBRE_EQUIPO
-router		CNAME	NOMBRE_EQUIPO
-gateway		CNAME	NOMBRE_EQUIPO
-gw		CNAME	NOMBRE_EQUIPO
-proxy		CNAME	NOMBRE_EQUIPO
-squid		CNAME	NOMBRE_EQUIPO
-pop		CNAME	NOMBRE_EQUIPO
-smtp		CNAME	NOMBRE_EQUIPO
-imap		CNAME	NOMBRE_EQUIPO
-ldap		CNAME	NOMBRE_EQUIPO
-mail		CNAME	NOMBRE_EQUIPO
-
-
+dns		CNAME   NOMBRE_MAQUINA
+www		CNAME	NOMBRE_MAQUINA
+router		CNAME	NOMBRE_MAQUINA
+gateway		CNAME	NOMBRE_MAQUINA
+gw		CNAME	NOMBRE_MAQUINA
+proxy		CNAME	NOMBRE_MAQUINA
+squid		CNAME	NOMBRE_MAQUINA
+pop		CNAME	NOMBRE_MAQUINA
+smtp		CNAME	NOMBRE_MAQUINA
+imap		CNAME	NOMBRE_MAQUINA
+ldap		CNAME	NOMBRE_MAQUINA
+mail		CNAME	NOMBRE_MAQUINA
+webmail		CNAME	NOMBRE_MAQUINA

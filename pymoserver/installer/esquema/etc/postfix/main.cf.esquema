@@ -1,0 +1,50 @@
+# See /usr/share/postfix/main.cf.dist for a commented, more complete version
+
+smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
+biff = no
+
+# appending .domain is the MUA's job.
+append_dot_mydomain = no
+
+# Uncomment the next line to generate "delayed mail" warnings
+#delay_warning_time = 4h
+
+content_filter=smtp-amavis:[localhost]:10024
+
+myhostname = mail.DOMINIO_MAQUINA
+alias_maps = hash:/etc/aliases
+alias_database = hash:/etc/aliases
+myorigin = /etc/mailname
+mydestination = mail.DOMINIO_MAQUINA, localhost, mail
+mynetworks = 127.0.0.0/8, 172.16.1.0/24
+mailbox_command = 
+mailbox_size_limit = 0
+recipient_delimiter = +
+
+# Map definition
+virtual_mailbox_domains = DOMINIO_MAQUINA
+virtual_alias_maps = ldap:/etc/postfix/virtualsource.cf, ldap:/etc/postfix/sharedsource.cf
+virtual_transport = lmtp:unix:/var/run/cyrus/socket/lmtp
+
+# For local only delivery
+smtpd_recipient_restrictions =
+        check_sender_access ldap:/etc/postfix/acllocal.cf
+        permit_mynetworks
+	permit_auth_destination
+	reject_unauth_destination
+smtpd_restriction_classes = insiders_only
+insiders_only = check_recipient_access  regexp:/etc/postfix/insiders, reject
+				    
+fallback_transport = smtp				    
+
+
+## TLS/SSL
+#smtp_use_tls = yes
+smtpd_use_tls = yes
+#smtp_tls_note_starttls = yes
+smtpd_tls_note_starttls = yes
+smtpd_tls_key_file = /etc/ssl/private/postfix-key.pem
+smtpd_tls_cert_file = /etc/ssl/postfix.pem
+smtpd_tls_CAfile = /etc/ssl/certs/cacert.pem
+#smtpd_tls_loglevel = 1
+

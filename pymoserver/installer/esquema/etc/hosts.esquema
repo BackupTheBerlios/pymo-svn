@@ -1,4 +1,4 @@
-127.0.0.1	NOMBRE_MAQUINA	DOMINIO_MAQUINA
+127.0.0.1	localhost.localdomain localhost NOMBRE_MAQUINA 
 
 # The following lines are desirable for IPv6 capable hosts
 # (added automatically by netbase upgrade)

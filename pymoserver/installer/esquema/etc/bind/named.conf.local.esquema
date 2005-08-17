@@ -1,0 +1,17 @@
+//
+// Do any local configuration here
+//
+zone "DOMINIO_MAQUINA" {
+	type master;
+	file "/etc/bind/db.DOMINIO_MAQUINA";
+};
+
+zone "ZONA_DNS.in-addr.arpa" {
+	type master;
+	file "/etc/bind/db.NET_INTERNA";
+};
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+

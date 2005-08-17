@@ -1,0 +1,8 @@
+dn: BASE_LDAP
+objectClass: dcObject
+objectClass: organization
+description: Base object
+dc: DOMINIO_SMB
+o: Servidor para PYMES
+structuralObjectClass: organization
+

@@ -1,0 +1,6 @@
+# Shared Folder + Aliases + Forwardings
+server_host = SERVIDOR_LDAP
+search_base = BASE_LDAP
+query_filter = (&(|(mail=%s)(gosaMailAlternateAddress=%s))(objectClass=posixGroup))
+#result_attribute = gosaSharedFolderTarget,gosaMailForwardingAddress
+result_attribute = memberUID

@@ -1,0 +1,6 @@
+ldap_servers: ldap://SERVIDOR_LDAP/
+#ldap_bind_dn: cn=admin,BASE_LDAP
+#ldap_bind_pw: clave
+ldap_search_base: ou=people,BASE_LDAP
+ldap_filter: uid=%u
+ldap_password_attr: userPassword

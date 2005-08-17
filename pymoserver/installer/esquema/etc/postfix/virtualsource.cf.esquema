@@ -1,0 +1,5 @@
+# Virtual source
+server_host = SERVIDOR_LDAP
+search_base = BASE_LDAP
+query_filter = (&(|(mail=%s)(gosaMailAlternateAddress=%s))(objectClass=gosaAccount))
+result_attribute = uid,gosaMailForwardingAddress

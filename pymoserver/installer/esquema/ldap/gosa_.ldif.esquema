@@ -1,0 +1,146 @@
+dn: cn=terminal-admin,BASE_LDAP
+objectClass: person
+cn: terminal-admin
+sn: Upload user
+description: GOto Upload Benutzer
+userPassword:: e2tlcmJlcm9zfXRlcm1pbmFsYWRtaW5AR09OSUNVUy5MT0NBTAo=
+structuralObjectClass: person
+
+dn: ou=systems,BASE_LDAP
+objectClass: organizationalUnit
+ou: systems
+structuralObjectClass: organizationalUnit
+
+dn: ou=terminals,ou=systems,BASE_LDAP
+objectClass: organizationalUnit
+ou: terminals
+structuralObjectClass: organizationalUnit
+
+dn: ou=servers,ou=systems,BASE_LDAP
+objectClass: organizationalUnit
+ou: servers
+structuralObjectClass: organizationalUnit
+
+dn: ou=people,BASE_LDAP
+objectClass: organizationalUnit
+ou: people
+structuralObjectClass: organizationalUnit
+
+dn: ou=computers,BASE_LDAP
+objectClass: organizationalUnit
+ou: computers
+structuralObjectClass: organizationalUnit
+
+dn: ou=groups,BASE_LDAP
+objectClass: organizationalUnit
+ou: groups
+structuralObjectClass: organizationalUnit
+
+dn: cn=cyrus,ou=people,BASE_LDAP
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: cyrus
+cn: cyrus
+givenName: cyrus
+sn: cyrus administrator
+userPassword:: dGVzdGVy
+structuralObjectClass: inetOrgPerson
+
+dn: cn=administrators,ou=groups,BASE_LDAP
+gosaSubtreeACL:: OmFsbA==
+structuralObjectClass: posixGroup
+objectClass: top
+objectClass: posixGroup
+objectClass: gosaObject
+cn: administrators
+gidNumber: 999
+memberUid: admin
+
+dn: cn=mail,ou=servers,ou=systems,BASE_LDAP
+objectClass: goImapServer
+objectClass: goServer
+macAddress: 00:B0:D0:F0:DE:1F
+cn: mail
+goImapName: imap://mail.DOMINIO_MAQUINA
+goImapConnect: {localhost:143/notls}
+goImapAdmin: cyrus
+goImapPassword: tester
+goImapSieveServer: localhost
+goImapSievePort: 2000
+structuralObjectClass: goServer
+
+
+dn: ou=incoming,BASE_LDAP
+objectClass: organizationalUnit
+ou: incoming
+structuralObjectClass: organizationalUnit
+
+dn: ou=configs,ou=systems,BASE_LDAP
+objectClass: organizationalUnit
+ou: configs
+structuralObjectClass: organizationalUnit
+
+dn: ou=gosa,ou=configs,ou=systems,BASE_LDAP
+objectClass: organizationalUnit
+ou: gosa
+structuralObjectClass: organizationalUnit
+
+dn: cn=admin,ou=people,BASE_LDAP
+structuralObjectClass: inetOrgPerson
+userPassword:: YWRtaW4=
+sambaLMPassword: F0D412BD764FFE81AAD3B435B51404EE
+sambaNTPassword: 209C6174DA490CAEB422F3FA5A7AE634
+sn: GOsa main administrator
+givenName: admin
+cn: admin
+homeDirectory: /home/admin
+loginShell: /bin/bash
+uidNumber: 1001
+gidNumber: 1001
+shadowLastChange: 12902
+gosaDefaultLanguage: de_DE
+sambaSID: S-1-5-21-499806066-1916519050-1478737032-3003
+sambaPwdLastSet: 1114739259
+sambaLogonTime: 2147483647
+sambaLogoffTime: 2147483647
+sambaKickoffTime: 2147483647
+sambaPwdMustChange: 2147472000
+sambaAcctFlags: [UX          ]
+uid: admin
+sambaMungedDial: bQAIACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABkA
+ AEAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAUAAQABoACA
+ ABAEMAdAB4AEMAZgBnAFAAcgBlAHMAZQBuAHQANTUxZTBiYjAYAAgAAQBDAHQAeABDAGYAZwBGAGw
+ AYQBnAHMAMQAwMEUwMDAxMBYACAABAEMAdAB4AEMAYQBsAGwAYgBhAGMAawAwMDAwMDAwZRIACAAB
+ AEMAdAB4AFMAaABhAGQAbwB3ADAxMDAwMDAwIgAIAAEAQwB0AHgASwBlAHkAYgBvAGEAcgBkAEwAY
+ QB5AG8AdQB0ADAwMDAwMDAwKgAAAAEAQwB0AHgATQBpAG4ARQBuAGMAcgB5AHAAdABpAG8AbgBMAG
+ UAdgBlAGwAIAACAAEAQwB0AHgAVwBvAHIAawBEAGkAcgBlAGMAdABvAHIAeQAwMCAAAgABAEMAdAB
+ 4AE4AVwBMAG8AZwBvAG4AUwBlAHIAdgBlAHIAMDAYAAIAAQBDAHQAeABXAEYASABvAG0AZQBEAGkA
+ cgAwMCIAAgABAEMAdAB4AFcARgBIAG8AbQBlAEQAaQByAEQAcgBpAHYAZQAwMCAAAgABAEMAdAB4A
+ FcARgBQAHIAbwBmAGkAbABlAFAAYQB0AGgAMDAiAAIAAQBDAHQAeABJAG4AaQB0AGkAYQBsAFAAcg
+ BvAGcAcgBhAG0AMDAiAAIAAQBDAHQAeABDAGEAbABsAGIAYQBjAGsATgB1AG0AYgBlAHIAMDA=
+sambaHomePath: \\NOMBRE_MAQUINA\homes
+sambaHomeDrive: W:
+sambaPrimaryGroupSID: S-1-5-21-499806066-1916519050-1478737032-3003
+sambaDomainName: DOMINIO_SMB
+objectClass: sambaSamAccount
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: gosaAccount
+
+dn: cn=admin,ou=groups,BASE_LDAP
+structuralObjectClass: posixGroup
+objectClass: top
+objectClass: posixGroup
+objectClass: sambaGroupMapping
+cn: admin
+description: Group of user admin admin
+gidNumber: 1001
+sambaGroupType: 2
+sambaSID: S-1-5-21-499806066-1916519050-1478737032-3003
+
+

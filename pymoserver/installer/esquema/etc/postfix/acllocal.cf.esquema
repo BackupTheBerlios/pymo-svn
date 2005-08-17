@@ -1,0 +1,6 @@
+# Access Lists for Non Local Delivery
+server_host = SERVIDOR_LDAP
+search_base = BASE_LDAP
+query_filter = (&(|(mail=%s)(gosaMailAlternateAddress=%s))(gosaMailDeliveryMode=*I*))
+result_attribute = mail
+result_filter = insiders_only

@@ -1,0 +1,22 @@
+
+RANDFILE = /root/cert.rand
+
+[ req ]
+default_bits = 1024
+encrypt_key = yes
+distinguished_name = req_dn
+x509_extensions = cert_type
+prompt = no
+
+[ req_dn ]
+C=AR
+ST=Cordoba
+L=Cordoba
+O=PyMO key generator
+OU=Automatically-generated CYRUS, APACHE and POSTFIX SSL key
+CN=NOMBRE_MAQUINA
+emailAddress=admin@DOMINIO_MAQUINA
+
+
+[ cert_type ]
+nsCertType = server

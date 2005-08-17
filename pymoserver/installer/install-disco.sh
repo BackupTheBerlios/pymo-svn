@@ -1,6 +1,7 @@
 #!/bin/bash
+#
 # PyMO Server disk installer.
-# Copyright (C) 2001-2003 Fundación Via Libre
+# Copyright (C) 2001-2005 Fundación Via Libre
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the
@@ -35,17 +36,20 @@ while [ ! $OK ]; do
 # Borramos el menu del disco
 menu_disco=
 
+# Esto es para qemu, para que no quede basura en el listado
+sfdisk -l > /dev/null
+
 # Buscamos los disco intalados
-discos=`sfdisk -l |grep "Disk /dev/hd[a-z]\:" |cut -b11-13`
+discos=`sfdisk -l |grep "Disk /dev/[hs]d[a-z]\:" |cut -b11-13`
 memoria=$((`dmesg |grep Memory| tr "/" " "| tr "k" " " |awk '{ print $2 }'`/1024))
 
 # Creamos el menu con los discos
 for disco in $discos ; do
-    info_disco=`dmesg |grep "^$disco: " |grep -v CHS |cut -b6-|sed 's/ /\\ /g'`
+    info_disco=`dmesg |grep "^$disco: " |grep -v CHS |cut -b6-|sed 's/ /\\ /g' |grep . || dmesg|perl -w -e 'BEGIN{$d=shift}undef $/;$_=<>;m/^.*Vendor:\s*(.*?)\s*Rev:.*?scsi disk\s+$d.*/s; print "$1\n"' $disco |grep . || echo "Dispositivo desconocido"`
     menu_disco="$menu_disco $disco  \"$info_disco\""
 done
 
-eval "$DIALOG --clear --title 'Particionado del disco' \
+eval "$DIALOG --clear --title 'Selección del disco' \
         --menu 'Elija el disco que desea usar para instalar el servidor' 12 51 3 \
         $menu_disco 2> $tempfile "
 
@@ -64,33 +68,33 @@ case $retval in
 esac
 
 
-$DIALOG --clear --title "Particionado del disco" \
-        --menu "Elija a continuacion como quiere realizar el particionado del \
-disco\n" 10 51 2 \
-        "Automatico"  "Particiona segun por defecto" \
-        "Manual" "La particion la hace el usuario" 2> $tempfile
+#$DIALOG --clear --title "Particionado del disco" \
+#        --menu "Elija a continuación cómo quiere realizar el particionado del \
+#disco\n" 10 51 2 \
+#        "Automático"  "Particiona por defecto" \
+#        "Manual" "La partición la hace el usuario" 2> $tempfile
 
-retval=$?
+#retval=$?
 
-particion=`cat $tempfile`
+#particion=`cat $tempfile`
 
-case $retval in
-  0)
-    if [[ $particion = 'Automatico' ]] ; then
-	advertencia "!! Esto borrara todo el contenido del disco !!"
+#case $retval in
+#  0)
+#    if [[ $particion = 'Automático' ]] ; then
+	advertencia "!! Esto borrará todo el contenido del disco !!"
 	sino=$?
 	if [ $sino == "0" ]; then 
-	    advertencia "!! Si elije continuar no podra recuperar el \
-conenido anterior del dico. Esta realmente seguro que desea borrar el disco? !!"
+	    advertencia "!! Si elige continuar no podrá recuperar el \
+contenido anterior del disco. Está realmente seguro que desea borrar el disco? !!"
 	    sino1=$?
-	    if [ $sino1 == "0" ]; then
+	    if [ "$sino1" == "0" ]; then
 		tamanio_disco=$((`fdisk -s /dev/$disco`/1024))
 		tamanio_part=$(($tamanio_disco-($memoria*2)))
 		cd /tmp
 		echo -e "0,$tamanio_part,L,*\n,,S\n" | sfdisk -q -uM /dev/$disco >>$LOGFILE 
 		cd /dev
 		MAKEDEV $disco
-		mke2fs -q /dev/$disco\1
+		mke2fs -j -q /dev/$disco\1
 		mkswap /dev/$disco\2
 		OK=1
 		partroot=$disco\1
@@ -102,25 +106,23 @@ conenido anterior del dico. Esta realmente seguro que desea borrar el disco? !!"
 		return 0
 	    fi
 	fi	    
-    else
-	advertencia "Debe crear 2 particiones. Una de las particiones tiene \
-que ser tipo linux y la otra tipo swap"
-	sino=$?
-	if [ $sino ]; then 
-	    error "Funcion no implementada!"
+#    else
+#	advertencia "Debe crear 2 particiones. Una de las particiones tiene \
+#que ser tipo linux y la otra tipo swap"
+#	sino=$?
+#	if [ $sino ]; then 
+#	    error "Función no implementada!"
 	    # cfdisk
-	    OK=1
-	    return 0
-	fi	    
-    fi
-    ;;
-  1)
-    exit 1;; 
+#	fi	    
+#    fi
+#    ;;
+#  1)
+#    exit 1;; 
 # Apreto el Cancel
-  255)
-    exit 1;;
+#  255)
+#    exit 1;;
 # Apreto escape
-esac
+#esac
 done
 }
 
@@ -129,14 +131,13 @@ copiar_archivos() {
 
 mount /dev/$disco\1 /mnt
 cd /mnt
-tar xzvpf /install/vlps-0.3.tgz |awk '{ printf "XXX\n%i\nInstalando: %s\nXXX\n", (cnt++)/158.79,$0}' | $DIALOG --guage "Instalando Archivos" 15 70 
+tar xzvpf /install/vlps-0.5.tar.gz |awk '{ printf "XXX\n%i\nInstalando: %s\nXXX\n", (cnt++)/297.60,$0}' | $DIALOG --guage "Instalando Archivos" 15 70 
 
 }
 
-instalar_lilo() {
-lilo -r /mnt
-cd /
-umount /mnt
+instalar_grub() {
+chroot /mnt bash -c "grub-install --no-floppy /dev/$disco"
+
 }
 
 configurar_servidor() {
@@ -149,21 +150,69 @@ for listado in `find etc -type f`; do
 
 done
 
-case $conexion in
+# Configuramos las conexiones
+if [ "$dhcp" == 'no' ]; then
+    case $conexion in
 
-    'Dedicado')
-	sed -f $parametros < interfaces-dedicado.esquema >/mnt/etc/network/interfaces
+	'Dedicado')
+	    sed -f $parametros < interfaces-dedicado.esquema >/mnt/etc/network/interfaces
 	;;
-    'Local')
-	sed -f $parametros < interfaces-local.esquema >/mnt/etc/network/interfaces
-    ;;
-    *)
-	sed -f $parametros < interfaces.esquema >/mnt/etc/network/interfaces
-    ;;
+	'Local')
+	    sed -f $parametros < interfaces-local.esquema >/mnt/etc/network/interfaces
+	;;
+	*)
+	    sed -f $parametros < interfaces.esquema >/mnt/etc/network/interfaces
+	;;
 
-esac
+    esac
+else
+    case $conexion in
 
-sed -f $parametros <dns-host.esquema >/mnt/etc/bind/$dominio
-sed -f $parametros <dns-reverso.esquema >/mnt/etc/bind/$red_interna
+	'Dedicado')
+	    sed -f $parametros < interfaces-dedicado-dhcp.esquema >/mnt/etc/network/interfaces
+	;;
+	'Local')
+	    sed -f $parametros < interfaces-local-dhcp.esquema >/mnt/etc/network/interfaces
+	;;
+	*)
+	    sed -f $parametros < interfaces.esquema >/mnt/etc/network/interfaces
+	;;
+
+    esac
+fi
+
+sed -f $parametros <dns-host.esquema >/mnt/etc/bind/db.$dominio
+sed -f $parametros <dns-reverso.esquema >/mnt/etc/bind/db.$red_interna
+
+#if [ "$conexion" = 'Modem']; then
+#    cd /mnt/etc/ppp
+#    ln -s ppp_on_boot.dsl ppp_on_boot 
+#fi
+
+# Ponemos los scrips administrativos previamente configurados.
+cd /install/esquema
+
+for listado in `find ldap -type f`; do
+    sed -f $parametros < ./$listado > /mnt/root/${listado/.esquema/}
+done
+
+cp $parametros /mnt/root
+
+cp /install/setup.sh /mnt/root/setup.sh
+chmod u+x /mnt/root/setup.sh
+
+
+# Intalamos los archivos necesarios para el firewall
+cd /install/esquema/shorewall/$conexion
+
+for i in `ls |grep -v ".esquema"` ; do
+    cp $i /mnt/etc/shorewall/
+done
+for i in `ls |grep ".esquema"` ; do
+    sed -f $parametros < $i >/mnt/etc/shorewall/${i/.esquema//}
+done
+
+# Configuracion para samba y ldap
+sed -f $parametros < smbldap_conf.pm.esquema >/mnt/usr/local/sbin/smbldap_conf.pm
 
 }

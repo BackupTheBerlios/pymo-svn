@@ -10,6 +10,5 @@ auto IF_INTERNA
 iface IF_INTERNA inet static
     address IP_INTERNA
     netmask MASK_INTERNA
-    broadcast NET_INTERNA
     gateway GW_INTERNA
 

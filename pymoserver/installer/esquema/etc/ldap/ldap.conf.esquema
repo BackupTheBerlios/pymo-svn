@@ -12,6 +12,11 @@
 host SERVIDOR_LDAP
 base BASE_LDAP
 
+TLS_CACERT /etc/ssl/certs/cacert.pem
+TLS_CERT /etc/ssl/ldap.pem
+TLS_KEY /etc/ssl/priviate/ldap-key.pem
+TLS_REQCERT demand
+
 SIZELIMIT	12
 TIMELIMIT	15
 DEREF		never

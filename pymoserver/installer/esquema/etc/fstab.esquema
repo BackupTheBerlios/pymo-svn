@@ -1,7 +1,7 @@
 # /etc/fstab: Información estática del sistema de ficheros.
 #
 # <Sis. ficheros>	<Punto montaje>	<Tipo>	<Opciones>			<volcado>	<pasada>
-/dev/PART_ROOT	/		ext2	defaults,errors=remount-ro	0	1
+/dev/PART_ROOT	/		ext3	defaults,errors=remount-ro	0	1
 proc		/proc		proc	defaults			0	0
 /dev/fd0	/floppy		auto	defaults,user,noauto		0	0
 /dev/PART_SWAP	swap		swap	defaults			0	2

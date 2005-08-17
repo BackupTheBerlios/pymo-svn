@@ -1,4 +1,4 @@
-search BUSQUEDA_DNS
-nameserver SERVIDOR_DNS1
+search DOMINIO_MAQUINA
+nameserver 127.0.0.1
 
 

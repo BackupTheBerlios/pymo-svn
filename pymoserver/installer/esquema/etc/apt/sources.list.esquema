@@ -1,0 +1,3 @@
+deb DEBIAN_US  sarge main 
+
+deb DEBIAN_SECURITY stable/updates main 
