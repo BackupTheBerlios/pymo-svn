@@ -1,0 +1,1068 @@
+<?xml version='1.0'?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd">
+
+<book id="index" lang="es">
+  <title>Instalación y Administración del PyMO Server</title>
+  <titleabbrev>PyMO Server</titleabbrev>
+
+  <chapter id="introcuccion">
+    <title>Introducción</title>
+
+    <para>
+      Bienvenidos al PyMO Server de la Fundación Vía Libre.
+    </para>
+
+    <section>
+      <title>Términos Legales</title> 
+
+      <para>
+	El Servidor PyMO es Software Libre, por lo tanto Ud. lo puede
+	distribuir y/o modificar bajo los términos de la GNU (General
+	Public License) tal como está publicada por la Free Software
+	Foundation, Inc.  (más información en...)
+      </para>
+  
+    </section>
+
+    <section>
+      <title>Acerca de esta distribución y agradecimientos</title>
+
+      <para>
+	Esta compilación de programas especialmente dirigida Pequeñas
+	y Medianas Organizaciones es el resultado del trabajo del
+	equipo de la Fundación Vía Libre y es parte del Proyecto de
+	Apoyo a Pequeñas y Medianas Organizaciones que actualmente
+	está ejecutando. Este proyecto es posible gracias al aporte de
+	distintas organizaciones, tales como: Fundación AVINA,
+	Universidad Blas Pascal, Sun Microsystems y donantes privados.
+      </para>
+
+    </section>
+
+    <section>
+      <title>El porque del PyMO Server.</title>
+
+      <para>
+	Nuestra sociedad alberga miles de emprendimientos de distinta
+	envergadura, algunos de bien público, como las ONGs - desde
+	escuelas, bibliotecas, fundaciones de distinta índole,etc.- y
+	otros con fines comerciales o industriales como las PyMEs. Es
+	claro que el bienestar de estos emprendimientos redunda,
+	directa o indirectamente, en bienestar social, y que tanto la
+	informatización de sus operaciones como el acceso a
+	comunicaciones electrónicas son poderosas herramientas para
+	lograr ese bienestar.
+      </para>
+
+      <para>
+	Lamentablemente, muchos de ellos carecen de recursos para
+	afrontar su informatización. Es conocido que el mayor costo de
+	ésta no es el equipamiento en sí, sino el software, y su
+	mantenimiento. Muchos de estos emprendimientos, frente a la
+	imperiosa necesidad de informatizarse y la imposibilidad de
+	costear los programas, optan por el uso de copias ilegales de
+	software comercial, poniéndose en grave peligro de sanciones
+	penales.
+      </para>
+
+      <para>
+	Por otro lado, algunos emprendimientos seguramente cuentan con
+	los recursos económicos para hacerlo, pagando por el derecho
+	de uso de software propietario. Al hacerlo estos
+	emprendimientos están siempre en una situación de dependencia
+	tecnológica permanente, al tener que recurrir siempre a un
+	solo proveedor para obtener alguna solución a sus problemas
+	informáticos.
+      </para>
+
+      <para>
+	Utilizando Software Libre ambos problemas se solucionan y los
+	emprendimientos pasan, por un lado a poder elegir libremente
+	entre distintas opciones de Software, y por otro a poder
+	nutrirse de una inmensa colección de programas de computadoras
+	que ya están libres y gratis en Internet.
+      </para>
+
+      <para>
+	El PyMO Server es una selección de software libre basado en la
+	distribución DEBIAN GNU/Linux versión 3.0 denominada Woody ya
+	existente en Internet. Esta selección tiene por objetivo
+	facilitar el proceso de instalación y puesta en marcha de un
+	servidor informático con las funcionalidades más usadas en el
+	grupo de las Pequeñas y Medianas Organizaciones, tales como:
+      </para>
+
+      <itemizedlist>
+	<listitem>
+	  <para>Autenticación</para>
+	</listitem>
+	<listitem>
+	  <para>Archivos</para>
+	</listitem>
+	<listitem>
+	  <para>Correo electrónico</para>
+	</listitem>
+	<listitem>
+	  <para>Internet</para>
+	</listitem>
+      </itemizedlist>
+
+      <para>
+	Utilizando esta selección los emprendimientos está liberándose
+	tecnológicamente y aprovechando la inmensa colección de
+	software existente pero que carecía de la de fue pensado para
+	ayudar a estas empresas y organizaciones a montar una
+	infraestructura informática eficiente, estable y económica
+	basada en Software Libre.
+      </para>
+
+    </section>
+
+    <section>
+      <title>Servicios del PyMO</title>
+
+      <para>
+	El PyMO Server tiene los siguientes servicios preinstalados,
+	configurados y funcionando luego de la instalación.
+      </para>
+
+      <itemizedlist  mark="bullet" spacing="compact">
+	<listitem>
+	  <para>
+	    Servidor de DNS (bind) preconfigurado para manejar el
+	    dominio local que se configuro en en momento de la
+	    instalación.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Servidor de archivos para máquinas Unix (NFS).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Servidor de archivos para máquinas windows (samba).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Servidor de correo electrónico (exim para
+	    <emphasis>smtp</emphasis> y courier para <emphasis>imap e
+	    imaps</emphasis>).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Servidor de LDAP (openldap).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Servidor proxy para acelerar la navegación (squid).
+	  </para>
+	</listitem>
+      </itemizedlist>
+
+    </section>
+
+    <section>
+      <title>Futuras mejoras</title>
+
+      <para>
+	Para las próximas versiones están planeadas los siguiente
+	cambios o mejoras.
+      </para>
+
+      <itemizedlist  mark="bullet" spacing="compact">
+	<listitem>
+	  <para>
+	    Cambiar el procedimiento de booteo desde el CD.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Agregar la opción de configurar la interfase externa por
+	    DHCP
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Poner un servidor DHCP desactivado y preconfigurado.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Cambiar el método que usan exim, courier y samba para
+	    autenticar deforma que no pase por PAM.
+	  </para>
+	</listitem>
+      </itemizedlist>
+
+    </section>
+
+  </chapter>
+
+  <chapter>
+    <title>Pre requisitos</title>
+
+    <para>Antes de instalar el PyMO Server necesitamos los siguientes
+      pre-requisitos:
+    </para>
+    <section>
+      <title>Requerimientos mínimos del equipo</title>
+      <itemizedlist>
+	<listitem>
+	  <para>Computadora 586 (pentium, cirix, amd, etc) de
+	    100MHz</para>
+	</listitem>
+	<listitem>
+	  <para>64MB de ram</para>
+	</listitem>
+	<listitem>
+	  <para>Disco rígido de 2GB</para>
+	</listitem>
+	<listitem>
+	  <para>Disquetera de 3 1/2 *</para>
+	</listitem>
+	<listitem>
+	  <para>Unidad de CD-ROM</para>
+	</listitem>
+      </itemizedlist>
+    </section>
+    <section>
+      <title>Nombre del equipo</title> 
+
+      <para>Cada máquina esta identificada de las otras por un número
+      único. Pero esto es muy difícil acordarse de esos números, por
+      lo que se le asocia un nombre para que nos resulte más fácil
+      identificar la máquina.</para>
+
+      <para>El nombre de la máquina no es un dato importante, pero si
+      necesario, por lo que se debe elegir uno.</para>
+
+      <para>Ejemplos de nombres que se pueden poner son: servidor,
+      server, fileserver. Algunas personas prefieren ponerle a las
+      máquinas de su red nombres relacionados a un tema especifico,
+      como letras griegas, plantas, personajes de ficción, etc.</para>
+ 
+      <para>El nombre del servidor es: __________________________</para>
+
+    </section>
+    <section>
+      <title>Nombre del dominio</title>
+
+      <para>Para ordenar los nombres de las máquinas existe una
+      jerarquía, esta jerarquía esta representada en la dirección de
+      dominio. Podemos decir que es la parte que se encuentra a
+      continuación del <emphasis>@</emphasis> en su dirección de
+      correo. Si no se desea la funcionalidad de corre electrónico y
+      no se piensa conectarse a Internet, se puede crear un nombre de
+      fantasía. </para>
+
+      <para>Ejemplos de nombres de dominios son vialibre.org.ar,
+      cordoba.miempresa.com.ar. Sin no posee un dominio y desea
+      conectase a Internet y manejar correo, necesita registrar un
+      dominio, si es un tipo <emphasis>com.ar</emphasis> se lo puede
+      registrar en <emphasis>www.nic.ar</emphasis>.</para>
+
+      <para>El nombre de dominio es: __________________________</para>
+
+    </section>
+
+    <section>
+      <title>IP del equipo y mascara de red</title>
+
+      <para>Cada máquina esta identificada en la red por un número. En
+      una red IP este número esta formado por cuatro números que van
+      desde el 0 al 255 y estan separados por un punto.</para>
+
+      <para>Para determinar cuando uno de esos números pertenece o no
+      a nuestra red local se utiliza la <emphasis>Mascara de
+      Red</emphasis> que es otro numero como el IP, pero que tiene
+      como fin marcar cuales son las que estan directamente conectadas
+      y cuales no.</para>
+
+      <para>Por ejemplo, para una red que tenga hasta 254 máquinas,
+      utilizamos la mascara 255.255.255.0 (el 0 es porque solo nos
+      deja variar la última parte del número). Si la mascara fuera
+      255.255.0.0 (podemos variar los 2 últimos números) la red seria
+      de 65534 máquinas. </para>
+
+      <para>Los números IP se dividen en dos grandes grupos, los
+      públicos y los privados. Los IP públicos son los que se utilizan
+      para las máquinas que estan conectadas directamente a Internet y
+      se los proveen los prestadores se servicios de Internet. Los IP
+      privados son para que sean utilizados en redes locales que no
+      estan directamente conectadas a Internet. En el mundo solo puede
+      haber 1 máquina que tenga un determinado IP publico, pero puede
+      haber muchas máquinas que tenga el mismo IP privado, siempre que
+      no estén en la misma red local.</para>
+
+      <para>Los IP privados son los que comienzan con 10.x.x.x,
+      172.16.x.x al 172.31.x.x y los 192.168.x.x, donde X es un numero
+      que va entre 1 y 254. Pero que paso con el 0 y el 255? La
+      dirección que lleva el 0 se la conoce como "dirección de red" y
+      la que tiene el 255 se la llama "dirección de broadcast". En lo
+      que respecta a nosotros, simplemente no podemos
+      utilizarlas.</para>
+
+      <para>Para todas las configuraciones que provee el servidor se
+      plantea un esquema en donde las máquinas esta conectadas armando
+      una red privada y que las máquinas (estaciones de trabajo) no
+      estan conectadas directamente a Internet. Esto es por una
+      cuestión de seguridad.</para>
+
+      <para>Si para este punto todavía esta mareado y no sabe que
+      elegir, no se preocupe el servidor en el momento de la
+      instalación le va a sugerir una configuración en forma
+      predeterminada.</para>
+
+      <para>En numero de IP es: _____._____._____._____ y la mascara de red es: _____._____._____._____ </para>
+    </section>
+
+
+    <section>
+      <title>Tipo de conexión a Internet</title> <para>Este es un
+      punto importante de la configuración del PyMO Server porque se
+      debe elegir como interactúa el mismo en la red y en Internet. El
+      instalador configura muchas de las cosas según la elección que
+      se haga en este punto, por lo que es aconsejable prestar mucha
+      atención a esto.</para>
+
+      <para>Si recién esta organizando su red, este es el momento
+      indicado de elegir como quiere que sea la misma. </para>
+
+      <para>A Continuación se explica brevemente las diferencias entre
+      los distintos tipos de conexión a Internet.</para>
+  
+      <section>
+	<title>Conexión por <emphasis>ADSL</emphasis></title>
+	
+	<para>Para esta configuración el servidor requiere 2 placas de
+	 red. El acceso a Internet se hace conectando directamente el
+	 router ADSL a una de las placas de red del servidor.</para>
+
+	<para>El diagrama de como seria la red se muestra a
+	continuación.
+	</para>
+
+	<graphic fileref="imagenes/conf-adsl.png" format="PNG" scale="65" scalefit="1" align="center"/>
+
+        <para>En este caso el servidor actúa como firewall. Si activa
+        la opción de compartir Internet, permite que los usuarios que
+        estan en la red local pueden acceder también a Internet.</para>
+
+	<para>Para poder configurar este tipo de conexión hacen falta
+	los siguientes datos adicionales:</para>
+	<itemizedlist>
+	  <listitem>
+	    <para>Nombre del usuario</para>
+	  </listitem>
+	  <listitem>
+	    <para>Password</para>
+	  </listitem>
+	  <listitem>
+	    <para>El SMTP del proveedor de Internet</para>
+	  </listitem>
+	</itemizedlist>
+
+	<para>Todo esos datos se los puede preguntar a su proveedor de
+	Internet.</para>
+      </section>
+
+      <section>
+	<title>Conexión tipo <emphasis>Dedicado</emphasis></title>
+
+	<para>En este tipo de conexión, el servidor requiere 2 placas
+	de red. En una se conecta a la red local (privada) y en la
+	otra se conecta la red que tiene el acceso a Internet (red
+	publica).</para>
+
+	<para>En esta configuración se permite que haya máquinas que
+	estén en la red privada y en la red publica, aunque no se
+	aconseja, porque las máquinas que estan en la red publicas
+	pueden ser atacadas y comprometer la seguridad de toda la
+	red.</para>
+
+        <para>En este caso el servidor actúa como firewall entre ambas
+        redes. Si activa la opción de compartir Internet, permite que
+        los usuarios que estan en la red local pueden acceder también
+        a Internet.</para>
+
+        <para>En el siguiente diagrama se ve como seria la topología
+        de una red armada de esta forma.
+        </para>
+
+	<graphic fileref="imagenes/conf-dedicado.png" format="PNG" scale="65" scalefit="1" align="center"/>
+
+	<para>Para poder configurar este tipo de conexión hacen falta
+	los siguientes datos adicionales:</para>
+
+      <itemizedlist>
+	<listitem>
+	  <para>IP del la máquina en la red publica</para>
+	</listitem>
+	<listitem>
+	  <para>Mascara de red en la red publica</para>
+	</listitem>
+	<listitem>
+	  <para>La puerta de enlace a la red publica</para>
+	</listitem>
+      </itemizedlist>
+
+	<para>Todo esos datos se los puede preguntar a su proveedor de
+	Internet.</para>
+
+    </section>
+    <section>
+      <title>Conexión tipo <emphasis>Local</emphasis></title>
+
+        <para>Para esta configuración el servidor requiere una sola
+      placa de red. El acceso a Internet es provisto por otro equipo
+      que actúa como puerta de enlace en la red local.</para>
+
+	<tip><para>El servidor puede se configurado para actuar como proxy
+	web, para mejorar la velocidad de conexión o para restringir
+	los contenidos o a los usuarios.</para></tip>
+
+	<para>El siguiente diagrama se ve como seria una red con esta topología
+	</para>
+
+	<graphic fileref="imagenes/conf-local.png" format="PNG" scale="65" scalefit="1" align="center"/>
+
+	<para>Para poder configurar este tipo de conexión hacen falta
+	los siguientes datos adicionales:</para>
+
+      <itemizedlist>
+	<listitem>
+	  <para>La puerta de enlace de la red local.</para>
+	</listitem>
+	<listitem>
+	  <para>El SMTP del proveedor de internet</para>
+	</listitem>
+      </itemizedlist>
+
+	<para>La puerta de enlace en el número de IP que tiene la
+	máquina que nos provee la conexión local (suele ser una
+	máquina o un router con una conexión como un ADSL o algo
+	parecido)</para>
+
+	<para>El SMTP hay que pedírselo al proveedor de Internet.</para>
+    </section>
+
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>Instalación</title>
+
+    <para>En esta sección vamos a mostrar una instalación típica paso
+      a paso, y vamos a utilizar los siguientes pararmetros para
+      nuestra instalación:</para>
+
+    <itemizedlist>
+      <listitem>
+	<para><emphasis>Nombre del equipo:</emphasis></para>
+      </listitem>
+      <listitem>
+	<para><emphasis>Dominio del sistema:</emphasis></para>
+      </listitem>
+      <listitem>
+	<para><emphasis>IP del equipo:</emphasis></para>
+      </listitem>
+      <listitem>
+	<para><emphasis>Mascara de red:</emphasis></para>
+      </listitem>
+      <listitem>
+	<para><emphasis>Puerta de enlace:</emphasis></para>
+      </listitem>
+      <listitem>
+	<para><emphasis>DNS primario:</emphasis></para>
+      </listitem>
+      <listitem>
+	<para><emphasis>DNS secundario:</emphasis></para>
+      </listitem>
+    </itemizedlist>
+
+    <section>
+      <title>Nombre del equipo</title> 
+
+      <para>Insertamos el CD en la lectora y arrancamos la máquina. El
+	instalador del PyMO server inicia desde el CD, y luego de unos
+	instantes nos muestra un mensaje de bienvenida.
+      </para>
+
+      <graphic fileref="imagenes/install01.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+    </section>
+ 
+    <section>
+      <title>Dominio del sistema</title> 
+
+      <para>A continuación nos pide el <emphasis>nombre de la
+	  máquina</emphasis>. Es es el dato que fue explicado en el
+	punto (COMPLETAR).  Como es un valor que no puede quedar
+	vacío, pero no es excluyente, simplemente con presionar
+	<emphasis>ENTER</emphasis> el instalador tomara como nombre
+	<emphasis>vlps</emphasis>.
+      </para>
+
+      <graphic fileref="imagenes/install02.png" format="PNG" scale="65" scalefit="1" align="right"/>
+ 
+      <para>Luego nos pide el dominio, acá tenemos que poner lo que
+	elejios cuando leíamos los pre-requisitos. Recuerde que este
+	dato es fundamental para que funcione el correo electrónico. 
+      </para>
+
+      <graphic fileref="imagenes/install03.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+      </section>
+      <section>
+      <title>Tipo de conexión a Internet</title>
+      <para>El siguiente paso es elegir la forma que vamos a utilizar
+	conectarnos a Internet. El instalador nos deja elegir 4
+	opciones.  Para nuestro ejemplo de instalación vamos a
+	utilizar la opción <emphasis>Dedicado</emphasis> de forma de
+	ver algunas pantallas más, pero se recomienda utilizar la
+	opción <emphasis>Local</emphasis>.
+      </para>
+
+	  <graphic fileref="imagenes/install04.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+      <itemizedlist>
+	<listitem>
+	  <para>Sin Conexión</para>
+
+	  <para>Si no pensamos conectarnos a Internet, tenemos que
+	    elegir esta opción.</para>
+
+	</listitem>
+      </itemizedlist>
+
+      <para>El primer punto de la configuración de la red es el número
+	de IP de la máquina. Este numero es el que identifica al
+	servidor en la <emphasis>Red Local</emphasis>, y deber ser
+	único.
+      </para>
+
+      <graphic fileref="imagenes/install05.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+      <tip> <para>Se aconseja poner una IP Privada. Para más
+	  información vea el apéndice de IP Privadas</para></tip>
+
+      <para>Luego tenemos que configurar la mascara de la red de la
+	máquina. Este numero es el que delimita el rango en la red IP
+	de la <emphasis>Red Local</emphasis>.
+      </para>
+
+      <graphic fileref="imagenes/install06.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+      <para>El siguiente paso es configurar la puerta de enlace (también
+	conocido como pasarela o gateway). Ese valor es el IP que
+	tiene la máquina o router que esta conectado a Internet.
+      </para>
+
+      <graphic fileref="imagenes/install09.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+    </section>
+    <section>
+      <title>DNS primario y DNS secundario</title>
+      <para>Si bien el PyMO Server tiene su propio servidor DNS,
+	necesita los DNS del proveedor de Internet para resolver los
+	nombres que no pertenecen a la red local. Los DNS transforman los
+	nombres de las máquina en números de IP y viceversa. Esto es
+	muy importante para que funcione la navegación y el correo
+	electrónico.
+      </para>
+
+      <graphic fileref="imagenes/install10.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+      <para>Si el DNS falla, nos quedamos sin resolución de nombres,
+	por lo que se utilizan 2 o más DNS para asegurarse un buen
+	servicio.
+      </para>
+
+      <graphic fileref="imagenes/install11.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+      <tip> <para>Si no tiene anotado los números de DNS llame a su
+	  proveedor de Internet y pidaselos.</para></tip>
+      </section>
+      <section>
+	<title>Particionado e instalación de archivos</title>
+
+      <caution><para>A partir de ahora el instalador va a escribir en
+	  el disco. Si algo falla se puede perder todo los datos que
+	  estan en el mismo. Lea atentamente los mensajes y
+	  refleccione antes de elegir algo.</para></caution>
+
+      <para>Para particionar el disco el instalador nos da 2 opciones.
+	Una es dejar que el instalador lo haga solo, y la otra es
+	realizar las particiones en forma manual. Se recomiendo dejar
+	que particione automaticamete. Esto borra
+	<emphasis>TODO</emphasis> el contenido del disco y lo deja
+	listo para comenzar la instalación.
+       </para>
+
+      <graphic fileref="imagenes/install12.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+      <para>Una vez seleccionado como queremos que sea particionado el
+	disco, en nuestro caso hemos seleccionado
+	<emphasis>automático</emphasis>, nos pide confirmación antes
+	de proceder.
+      </para>
+
+      <graphic fileref="imagenes/install13.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+      <para>Nuevamente nos advierte sobre que estamos por borrar todo
+	lo que hay en el disco.
+      </para>
+
+      <graphic fileref="imagenes/install14.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+      <para>Finalizado la repartición del disco y el formateado de
+	todas las unidades, el instalador comienza a copiar los
+	archivos.
+      </para>
+
+      <graphic fileref="imagenes/install15.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+      </section>
+      
+    <section>
+      <title>Final de instalación</title>
+      <para>Cuando termina de copiar los archivos, nos muestra una
+	pantalla recordándonos que leamos la documentación de como
+	administrar el servidor. Presionamos
+	<emphasis>enter</emphasis> y eso reinicia el equipo. Retiramos
+	el CD y dejamos que inicie el sistema por primera vez-
+      </para>
+
+      <graphic fileref="imagenes/install16.png" format="PNG" scale="65" scalefit="1" align="right"/>
+    </section>
+
+  </chapter>
+
+  <chapter>
+    <title>Post instalación</title>
+
+    <para>Una vez que finalizado el proceso de instalación, cuando
+      arranca el servidor desde el disco recién instalado entramos con
+      el usario <emphasis>root</emphasis> con clave
+      <emphasis>password</emphasis> y ejecutamos la post instalación
+      tipeando el comando <emphasis>./setup.sh</emphasis>. Esto nos
+      muestra una pantalla como la siguiente.
+    </para>
+
+    <graphic fileref="imagenes/postinst03.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+    <para>El primer paso es establecer la contraseña del
+      administrador. Este clave es muy importante y debe guardarse en
+      forma segura.
+      </para>
+
+    <graphic fileref="imagenes/postinst04.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+    <para>En el sistema hay otro usuario que hemos reservado que es el
+    usuario admin. Este usuario esta pensado para que personal no
+    tectico pueda realizar algunas tareas administrativas
+    rutinarias. Esta clave es también importante.
+    </para>
+
+    <graphic fileref="imagenes/postinst05.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+    <para>Antes de continuar el servidor va a configurar e iniciar el
+    servidor LDAP y armar el árbol de directorio.
+    </para>
+
+    <graphic fileref="imagenes/postinst06.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+    <para>Los usuarios y la autenticación en el PyMO Server se
+    almacenan en un directorio LDAP. Para acceder al mismo para grabar
+    datos nuevos en ese directorio hace falta la clave de
+    administración del LDAP. A continuación se nos pide que cambiemos
+    esa clave. Esta clave es también importante.
+    </para>
+
+    <graphic fileref="imagenes/postinst07.png" format="PNG" scale="65" scalefit="1" align="right"/>
+  
+    <tip><para>No se preocupe si no ve lo que tipea, es por seguridad.</para></tip>
+    <para>Se va a pedir que ingrese la clave 2 veces para confirmar que este bien tipeada
+    </para>
+
+    <graphic fileref="imagenes/postinst08.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+    <para>SQUID es un servidor proxy. Esto sirve para mejorar la
+    velocidad de navegación ya que almacena las paginas visitadas y
+    cuando se las pide nuevamente en vez de buscarlas en Internet la
+    busca en el disco local y las envía como si vinieran de
+    Internet. También se puede utilizar para controlar desde que
+    máquinas se navega por Internet y hacia que lugares esta permitido
+    o no navegar. SQUID consume bastante recursos, por lo que si tiene
+    una conexión rápida y no quiere controlar a los usuarios o no
+    tiene conexión a Internet, es conveniente que lo deje apagado.
+    </para>
+
+    <graphic fileref="imagenes/postinst09.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+    <para>El servidor instala un sistema llamado MRTG que esta
+    configurado para graficar el uso del procesados, la red, la carga
+    del sistema y el uso de memoria. Para poder acceder a esos
+    gráficos con un navegador, hace falta un servidor web. El servidor
+    propone un servidor web que consume pocos recursos para que se
+    puedan acceder a esas estadísticas.
+    </para>
+
+    <graphic fileref="imagenes/postinst10.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+    <para>El ultimo paso es habilitar la capacidad de NAT del pymo
+    Server. Esto se utiliza cuando la conexión es por ADSL o cuando es
+    Dedicado y se desea que los usuarios puedan acceder en forma
+    transparente a internet. En general no es buena idea que los
+    usuario de la red privada tengan acceso directo a internet, pero
+    es muy comun encontrar esta configuración. Si no esta seguro no lo
+    active.</para>
+
+    <para>Finalmente el sistema esta listo para ser usado. Ahora hay que crear los usuarios y los grupos y configurar las estaciones de trabajo.
+    </para>
+
+    <graphic fileref="imagenes/postinst11.png" format="PNG" scale="65" scalefit="1" align="right"/>
+
+  </chapter>
+
+  <chapter>
+    <title>Administración de usuarios</title> 
+    <para>En este capitulo veremos como manejar los usuarios. La
+      administración de usuarios consiste básicamente en agregar y
+      eliminar usuarios, agregar y eliminar grupos y asignar usuarios
+      a grupos específicos.</para>
+    <section>
+      <title>Como crear usuarios</title>
+      
+      <para>Para crear un usuario entramos con el usuario
+      <emphasis>root</emphasis> y vamos al directocio
+      <emphasis>ldap</emphasis>. Ahi ejecutamos:
+      <emphasis>./ldap-useradd.sh nombre_usuario clave Nombre
+      Apellido</emphasis>, el programa nos pide la clave del
+      administrador ldap 2 veces.</para>
+
+      <para>Por ejemplo: <emphasis>./ldap-useradd.sh jperez contraseña
+      Juan Perez</emphasis></para>
+
+    </section>
+    <section>
+      <title>Como eliminar usuarios</title>
+      <para>Falta documentar.</para>
+    </section>
+    <section>
+      <title>Como crear grupos</title>
+
+      <para>Para crear un grupo entramos con el usuario
+      <emphasis>root</emphasis> y vamos al directorio
+      <emphasis>ldap</emphasis>. Ahi ejecutamos:
+      <emphasis>./ldap-groupadd.sh nombre_grupo "integrantes entre
+      comillas si son más de uno"</emphasis></para>
+      
+      <para>Por ejemplo: <emphasis>./ldap-groupadd.sh gerencia "jperez cgomez"</emphasis></para>
+
+    </section>
+    <section>
+      <title>Como Eliminar grupos</title>
+      <para>Falta documentar.</para>
+    </section>
+    <section>
+      <title>Asignando usuarios a un grupo</title>
+      <para>Durante la creación de un grupo se le puede asignar que usuarios van a pertenecer a dicho grupo.</para>
+      <para>Falta documentar cuando el usuario ya existe.</para>
+    </section>
+    <section>
+      <title>Quitando a usuarios de un grupo</title>
+      <para>Falta documentar.</para>
+    </section>
+
+
+  </chapter>
+
+  <chapter>
+    <title>Tareas administrativa comunes</title>
+    <para>
+      Estas son las cosas que tenemos que hacer para mantener nuestro
+      servidor.
+    </para>
+    <para>Todo por escribir. Se haceptan sugerencias.</para>
+  </chapter>
+
+  <chapter>
+    <title>Configuración de los clientes</title>
+    <section>
+      <title>Autenticación</title>
+      <para></para>
+    </section>
+    <section>
+      <title>Correo electrónico</title> 
+
+      <para>El servidor se encarga de despachar los correos que los
+	usuarios mandan y recibir los mensajes nuevos y guardarlos.
+	Los mensajes son almacenados en carpetas que pueden ser
+	accedidas por el usuario con un programa de correo electrónico
+	que soporte IMAP como Mozilla, Evolution, Outlook Express,
+	Netscape y muchos otros.</para>
+
+      <para>Como hay muchos clientes de correo electrónico, y escapa
+	al propósito de esta documentación el detallar los paso para
+	configurar cada uno de ellos. Indistintamente del programa
+	cliente que se use, todos estos necesitan los siguientes
+	datos:</para>
+      <itemizedlist  mark="bullet" spacing="compact">
+	<listitem>
+	  <para>Nombre o dirección IP del servidor de correo</para>
+	</listitem>
+	<listitem>
+	  <para>Dirección de correo electrónico</para>
+	</listitem>
+	<listitem>
+	  <para>Nombre del Usuario</para>
+	</listitem>
+	<listitem>
+	  <para>Clave del Usuario</para>
+	</listitem>
+      </itemizedlist>
+      <para>Para nuestro caso practico vamos a usar la siguiente
+	configuración:</para>
+      <itemizedlist  mark="bullet" spacing="compact">
+	<listitem>
+	  <para>Servidor:
+	    <emphasis>servidor.pymo.com.ar</emphasis></para>
+	</listitem>
+	<listitem>
+	  <para>Correo electrónico:
+	    <emphasis>jperez@pymo.com.ar</emphasis></para>
+	</listitem>
+	<listitem>
+	  <para>Nombre del Usuario: <emphasis>jperez</emphasis></para>
+	</listitem>
+	<listitem>
+	  <para>Clave del Usuario:
+	    <emphasis>********</emphasis></para>
+	</listitem>
+      </itemizedlist>
+
+      <section>
+	<title>Mozilla 1.x / Nescape 6.x y 7.x</title>
+
+	<para>En el menú <emphasis>edit</emphasis> elegimos
+	  <emphasis>Mails &amp; Newsgroups account settings</emphasis>.
+	  Ahí nos muestra la pantalla de configuración del correo.
+	    <figure id="mozilla01" float="1">
+	    <title>Opciones de configuración</title>
+	    <graphic fileref="imagenes/mozilla01.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>Como primer paso vamos a configurar el correo saliente,
+	  para eso seleccionamos <emphasis>Outgoing Server
+	    (SMTP)</emphasis>. En el campo <emphasis>Server
+	    Name</emphasis> tenemos que poner el nombre del servidor.
+	  En el campo <emphasis>User Names</emphasis> va el nombre de
+	  usuario que utiliza para autenticarse en el sistema.
+	    <figure id="mozilla02" float="1">
+	    <title>Configuración del SMTP</title>
+	    <graphic fileref="imagenes/mozilla02.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>Elegimos <emphasis>Add Account</emphasis> y se inicia el
+	  asistente de configuración del correo. Ahí elegimos Email
+	  account y presionamos <emphasis>Next</emphasis>
+	    <figure id="mozilla03" float="1">
+	    <title>Asistente de correo</title>
+	    <graphic fileref="imagenes/mozilla03.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>A continuación nos pide el nombre que debe acompañar a
+	  la dirección de correo. Ahí se debe poner el nombre de la
+	  persona que usa el correo. En este ejemplo hemos puesto
+	  <emphasis>Juan Perez</emphasis>. El siguiente campo hay que
+	  poner la dirección de correo electrónico como se muestra en
+	  el ejemplo.
+	    <figure id="mozilla04" float="1">
+	    <title>Nombre y dirección de correo</title>
+	    <graphic fileref="imagenes/mozilla04.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>El siguiente paso es configurar el correo entrante. Para
+	  eso elegimos <emphasis>IMAP</emphasis> y en el campo
+	  <emphasis>Incoming Server</emphasis> ponemos el nombre del
+	  servidor. Para nuestro ejemplo es
+	  <emphasis>pymo.com.ar</emphasis>
+	    <figure id="mozilla05" float="1">
+	    <title>Correo saliente</title>
+	    <graphic fileref="imagenes/mozilla05.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>Ahora tenemos que indicarle el nombre de usuario con el
+	  que nos conectamos. Ese nombre es el que se utiliza para
+	  entrar al sistema.
+	    <figure id="mozilla06" float="1">
+	    <title>Usuario de IMAP</title>
+	    <graphic fileref="imagenes/mozilla06.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>Finalmente nos pregunta como queremos reconocer esta
+	  cuenta en Mozilla. Con dejar lo que esta por defecto es
+	  suficiente. Presionando <emphasis>next</emphasis> pasamos a
+	  la ultima pantalla del asistente donde nos muestra un
+	  resumen de los datos cargados. Elegimos
+	  <emphasis>Finish</emphasis> para terminar con el asistente.
+	    <figure id="mozilla07" float="1">
+	    <title>Resumen de la configuración</title>
+	    <graphic fileref="imagenes/mozilla07.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>Adicionalmente resulta útil configurar el cliente de
+	  correo para que purge los mensajes borrados de las carpetas,
+	  y vacíe la papelera. Esto se puede configurar seleccionando
+	  <emphasis>Server Settings</emphasis> y a continuación
+	  marcando las opciones <emphasis>Clean up ("Expurge") Inbox
+	    on Exit</emphasis> y <emphasis>Empty Trash on
+	    Exit</emphasis>
+	    <figure id="mozilla08" float="1">
+	    <title>Purgado de mensajes borrados</title>
+	    <graphic fileref="imagenes/mozilla08.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+      </section>
+      <section>
+	<title>Outlook Express</title>
+
+	<para>En el menú <emphasis>herramientas</emphasis> elegimos
+	  <emphasis>cuentas</emphasis> y seleccionamos la solapa que
+	  dice <emphasis>correo</emphasis>
+	    <figure id="outlook01" float="1">
+	    <title>Configuración de cuentas</title>
+	    <graphic fileref="imagenes/outlook01.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	</figure></para>
+
+	<para>Apretamos el botón <emphasis>agregar</emphasis> y
+	  elegimos la opción <emphasis>correo</emphasis> y eso nos
+	  abre el asistente de configuración de correo electrónico. El
+	  primer dato que nos pide es el nombre que aparece junto con
+	  la dirección de correo electrónico. Completamos el campo y
+	  apretamos <emphasis>siguiente</emphasis>.
+	    <figure id="outlook02" float="1">
+	    <title>Nombre a mostrar</title>
+	    <graphic fileref="imagenes/outlook02.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+
+	<para>Ahora nos pregunta si es una cuenta que ya existe o si
+	  tiene que crear una cuenta nueva. Elegimos que la cuanta
+	  existe y completamos el campo con la dirección de correo
+	  electrónico. Completamos el campo y presionamos
+	  <emphasis>siguiente</emphasis>.
+	    <figure id="outlook03" float="1">
+	    <title>Dirección de correo electrónico</title>
+	    <graphic fileref="imagenes/outlook03.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>La siguiente pantalla nos pide el tipo del servidor de
+	  correo y el nombre de los mismo. Elegimos como correo
+	  entrante <emphasis>IMAP</emphasis>. En el campo de servidor
+	  de correo entrante y servidor de correo saliente ponemos el
+	  nombre que le asignamos al PyMO server  momento de
+	  instalación. En nuestro ejemplo se llama:
+	  <emphasis>servidor.pymo.com.ar</emphasis>
+	    <figure id="outlook04" float="1">
+	    <title>Tipo y nombre del servidor</title>
+	    <graphic fileref="imagenes/outlook04.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+
+	<para>A continuación nos pide el usuario y contraseña para
+	  conectarse al servidor. En el nombre de usuario tenemos que
+	  poner el nombre que nos identifica en la red, y la
+	  contraseña es la misma que usamos para validarnos en el
+	  sistema. Completamos los datos y presionamos
+	  <emphasis>siguiente</emphasis>
+	    <figure id="outlook05" float="1">
+	    <title>Usuario y contraseña</title>
+	    <graphic fileref="imagenes/outlook05.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>Ahora el asistente nos indica que acepto todos los
+	  datos. Presionamos <emphasis>finalizar</emphasis>
+	    <figure id="outlook06" float="1">
+	    <title>Final del asistente</title>
+	    <graphic fileref="imagenes/outlook06.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>Como podemos ver, ahora apareció una entrada de correo
+	  en la solapa.
+	    <figure id="outlook07" float="1">
+	    <title>Configuración de cuentas</title>
+	    <graphic fileref="imagenes/outlook07.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>Seleccionamos la cuenta que acabamos de crear y
+	  presionamos el botón <emphasis>propiedades</emphasis>. En
+	  esta ventana podemos configurar las distintas opciones sobre
+	  esta cuenta
+	    <figure id="outlook08" float="1">
+	    <title>Opciones de la cuenta</title>
+	    <graphic fileref="imagenes/outlook08.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>Elegimos la solapa <emphasis>servidores</emphasis> y
+	  seleccionamos la opción <emphasis>Mi servidor requiere
+	    autenticación</emphasis>
+	    <figure id="outlook09" float="1">
+	    <title>Autenticación del correo</title>
+	    <graphic fileref="imagenes/outlook09.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>Ahora elegimos el botan configuración que esta al lado
+	  de la opción marcada en el punto anterior y nos aseguramos
+	  de que este marcada la opción que dice <emphasis>usar misma
+	    configuración que el servidor de correo
+	    entrante</emphasis>.
+	    <figure id="outlook10" float="1">
+	    <title>Configuración del correo saliente</title>
+	    <graphic fileref="imagenes/outlook10.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>Seleccionamos la solapa <emphasis>conexión</emphasis>,
+	  seleccionamos <emphasis>Conectar siempre con esta cuenta
+	    mediante:</emphasis> y elegimos <emphasis>Red de área
+	    local. Luego apretamos
+	    <emphasis>aceptar</emphasis></emphasis>
+	    <figure id="outlook11" float="1">
+	    <title>Selecciona de conexión a utilizar</title>
+	    <graphic fileref="imagenes/outlook11.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+	<para>Al salir de la pantalla de configuración de la cuenta
+	  nos aparece un cartel que dice: <emphasis>¿Desea descargar
+	    carpetas del servidor de correo agregado?</emphasis>.
+	  Elegimos <emphasis>Si</emphasis> y el programa comienza a
+	  bajar las carpetas que están almacenadas en el servido.
+	    <figure id="outlook12" float="1">
+	    <title>Descargar las carpetas</title>
+	    <graphic fileref="imagenes/outlook12.png" format="PNG" scale="35" scalefit="1" align="right"/>
+	    </figure>
+	</para>
+
+      </section>
+    </section>
+
+  </chapter>
+
+  <chapter>
+    <title>Tecnología detrás del PyMO server</title>
+    <para>Falta escribir.</para>
+  </chapter>
+<!--
+   <part id="appendixes">
+    <title>Appendixes</title>
+    &shared.license.gpl;
+    &shared.license.fdl;
+  </part>
+  -->
+</book>
