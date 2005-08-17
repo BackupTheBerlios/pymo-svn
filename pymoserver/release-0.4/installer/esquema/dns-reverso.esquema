@@ -1,0 +1,10 @@
+@       IN      SOA     NOMBRE_MAQUINA.DOMINIO_MAQUINA. root.DOMINIO_MAQUINA. (
+                        2002061100       ; Serial, todays date + todays serial
+                        8H      ; Refresh
+                        2H      ; Retry
+                        1W      ; Expire
+                        1D)     ; Minimum TTL
+		NS	dns.DOMINIO_MAQUINA.
+
+HOST_INTERNA		PTR	NOMBRE_MAQUINA.DOMINIO_MAQUINA.
+
