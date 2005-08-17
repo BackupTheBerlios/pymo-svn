@@ -1,0 +1,1 @@
+perl -w -e 'open(IF, "/sbin/ifconfig eth0 |"); foreach (<IF>) { /inet addr:(\d+\.\d+\.\d+)/ && print("$1.1") && last }'

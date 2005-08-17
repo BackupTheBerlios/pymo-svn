@@ -1,0 +1,26 @@
+@       IN      SOA     NOMBRE_EQUIPO.DOMINIO_EQUIPO. root.DOMINIO_EQUIPO. (
+                        2002061100      ; Serial
+                        8H              ; refresh, seconds
+                        2H              ; retry, seconds
+                        1W              ; expire, seconds
+                        1D )            ; minimum, seconds
+;
+		NS	NOMBRE_EQUIPO
+		MX	10 smtp
+
+NOMBRE_EQUIPO	        A       IP_INTERNA
+
+dns		CNAME   NOMBRE_EQUIPO
+www		CNAME	NOMBRE_EQUIPO
+router		CNAME	NOMBRE_EQUIPO
+gateway		CNAME	NOMBRE_EQUIPO
+gw		CNAME	NOMBRE_EQUIPO
+proxy		CNAME	NOMBRE_EQUIPO
+squid		CNAME	NOMBRE_EQUIPO
+pop		CNAME	NOMBRE_EQUIPO
+smtp		CNAME	NOMBRE_EQUIPO
+imap		CNAME	NOMBRE_EQUIPO
+ldap		CNAME	NOMBRE_EQUIPO
+mail		CNAME	NOMBRE_EQUIPO
+
+
