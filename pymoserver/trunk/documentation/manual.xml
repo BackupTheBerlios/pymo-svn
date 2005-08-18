@@ -550,6 +550,22 @@
 
       </section>
 
+      <section>
+	<title>Sin conexión a Internet</title>
+
+	<para>
+	  Si no dispone una conexión a internet o no desea utilizar
+	  las funcionalidades que requieren de internet, puede elejir
+	  no configurar un acceso a internet.
+	</para>
+
+	<para>
+	  El servicio de correo electrónico no se desabilita si elije
+	  esta opción, pero queda restringido a uso interno.
+	</para>
+
+      </section>
+
     </section>
 
   </chapter>
@@ -588,87 +604,185 @@
     </itemizedlist>
 
     <section>
-      <title>Nombre del equipo</title> 
+      <title>Inicio desde el CD y mensajes de bienvenida</title> 
 
       <para>
-	Insertamos el CD en la lectora y arrancamos la máquina. El
-	instalador del PyMO server inicia desde el CD, y luego de unos
-	instantes nos muestra un mensaje de bienvenida.
+	Para comenzar la instalación necesitamos que la computadora
+	inicie desde la unidad de CD, para lo cual arrancamos la
+	máquina e insertamos el CD en la lectora. Si la computadora no
+	esta configurada para arrancar de CD hay que entrar el
+	programa de configuración de la misma y cambiar esa
+	opcion. Esto depende de cada máquina, pero la información de
+	como hacerlo esta en el manual de la placa madre.
+      </para>
+
+      <para>
+	 Una vez que arranco la instalación desde el CD, y luego de unos
+	momentos nos muestra un mensaje de bienvenida.
       </para>
 
       <graphic fileref="imagenes/install01.png" format="PNG" 
 	       scale="65" scalefit="1" align="right"/>
 
-    </section>
- 
-    <section>
-      <title>Dominio del sistema</title> 
-
       <para>
-	A continuación nos pide el <emphasis>nombre de la
-	máquina</emphasis>. Es es el dato que fue explicado en el
-	punto (COMPLETAR).  Como es un valor que no puede quedar
-	vacío, pero no es excluyente, simplemente con presionar
-	<emphasis>ENTER</emphasis> el instalador tomara como nombre
-	<emphasis>vlps</emphasis>.
+	 Luego nos muestra las siguientes pantallas, donde se explica
+	 un poco sobre el proyecto.
       </para>
 
       <graphic fileref="imagenes/install02.png" format="PNG" 
 	       scale="65" scalefit="1" align="right"/>
+
+      <graphic fileref="imagenes/install03.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+    </section>
+
+    <section>
+      <title>Nombre de la organización y ubicación</title> 
+
+      <para>
+	Para generar los certificados de seguridad que utiliza el
+	sistema hacen falta algunos datos en particular.
+      </para>
+
+      <para>
+	Los primero que nos pide el el Nombre de la organización /
+	empresa.
+      </para>
+
+      <graphic fileref="imagenes/install04.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+      <para>
+	Luego nos pide el pais, que tiene que estar en formato de 2
+	letras y en mayuscula. Si no ingrasa ningun valor y presiona
+	ENTER, por defecto se asumirá AR (Argentina)
+      </para>
+
+      <graphic fileref="imagenes/install05.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+      <para>
+	Es siguiente punto es preguntar el nombre de la provincia, en
+	otros paises se conocido como estado. Si presiona ENTER se
+	asumirá Cordoba.
+      </para>
+
+      <graphic fileref="imagenes/install06.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+      <para>
+	Finalmente nos pide la ciudad. Al igual que en el caso
+	anterior, si presiona ENTER se asumirá Cordoba.
+      </para>
+
+      <graphic fileref="imagenes/install07.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+      <para>
+	En este ejemplo siempre hemos completado el campo, ahunque con
+	los mismos valores que los por defecto.
+      </para>
+    </section>
  
+    <section>
+      <title>Nombre de la máquina y dominio del sistema</title> 
+
+      <para>
+	Ahora nos pide el <emphasis>nombre de la
+	máquina</emphasis>. Es es el dato que fue explicado en el
+	capitulo de pre-requisitos.  Como es un valor que no puede quedar
+	vacío, pero no es excluyente, simplemente con presionar
+	<emphasis>ENTER</emphasis> el instalador tomara como nombre
+	<emphasis>pymoserver</emphasis>.
+      </para>
+
+      <graphic fileref="imagenes/install08.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+      <para>
+	En este ejemplo hemos decidido llamar a la máquina "servidor".
+      </para>
+
       <para>
 	Luego nos pide el dominio, acá tenemos que poner lo que
 	elejios cuando leíamos los pre-requisitos. Recuerde que este
 	dato es fundamental para que funcione el correo electrónico.
       </para>
 
-      <graphic fileref="imagenes/install03.png" format="PNG" 
+      <graphic fileref="imagenes/install09.png" format="PNG" 
 	       scale="65" scalefit="1" align="right"/>
+
+      <para>
+	En este manual hemos decidido llamar al dominio "ejemplo.com.ar". 
+      </para>
 
       </section>
 
       <section>
-      <title>Tipo de conexión a Internet</title>
+      <title>Tipo de conexión a internet y dirección de IP privada</title>
 
       <para>
 	El siguiente paso es elegir la forma que vamos a utilizar
-	conectarnos a Internet. El instalador nos deja elegir 4
-	opciones.  Para nuestro ejemplo de instalación vamos a
-	utilizar la opción <emphasis>Dedicado</emphasis> de forma de
-	ver algunas pantallas más, pero se recomienda utilizar la
-	opción <emphasis>Local</emphasis>.
+	conectarnos a Internet. El instalador nos deja elegir entre 4
+	opciones que son: Dedicado, Local, ADSL y Ninguno.
       </para>
 
-      <graphic fileref="imagenes/install04.png" format="PNG" 
+      <para>
+	Recuerde que parte del funcionamiento y las preguntas
+	subsiguientes dependeran de la opción que elija aca.
+      </para>
+
+      <graphic fileref="imagenes/install10.png" format="PNG" 
 	       scale="65" scalefit="1" align="right"/>
 
-      <itemizedlist>
-	<listitem>
-	  <para>Sin Conexión</para>
+      <tip>
+	<para>
+	  Si no sabe que elejir en este punto y luego de revisar
+	  nuevamente la unidad de pre-requisitos, todabia no sabe que
+	  elejir, consulte con alguin que tenga conocimiento del
+	  tema. Si esto no fuera posible, una opcion medianamente
+	  segura sería elejir el tipo <emphasis>Local</emphasis>.
+	</para>
+      </tip>
 
-	  <para>Si no pensamos conectarnos a Internet, tenemos que
-	    elegir esta opción.</para>
-
-	</listitem>
-      </itemizedlist>
-
-      <para>El primer punto de la configuración de la red es el número
-	de IP de la máquina. Este numero es el que identifica al
-	servidor en la <emphasis>Red Local</emphasis>, y deber ser
-	único.
+      <para>
+	Sin importar lo que hayamos seleccionado como conexión a
+	internet, el equipo necesita su propia IP para comunicarse con
+	las máquina que estan en la red. Este numero es el que
+	identifica al servidor en la <emphasis>Red Local</emphasis>, y
+	deber ser único.
       </para>
 
-      <graphic fileref="imagenes/install05.png" format="PNG" scale="65" scalefit="1" align="right"/>
+      <para>
+	Si no sabe que pones, presionando ENTER se utilizara la opción
+	por defecto que es 172.16.1.1
+      </para>
 
-      <tip> <para>Se aconseja poner una IP Privada. Para más
-	  información vea el apéndice de IP Privadas</para></tip>
+      <graphic fileref="imagenes/install11.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
 
-      <para>Luego tenemos que configurar la mascara de la red de la
+      <para>
+	En este manual elejimos poner 192.168.1.1
+      </para>
+
+      <para>
+	Luego tenemos que configurar la mascara de la red de la
 	máquina. Este numero es el que delimita el rango en la red IP
 	de la <emphasis>Red Local</emphasis>.
       </para>
 
-      <graphic fileref="imagenes/install06.png" format="PNG" scale="65" scalefit="1" align="right"/>
+      <para>
+	Si no sabe que pones, presionando ENTER se utilizara la opción
+	por defecto que es 255.255.255.0
+      </para>
+
+      <graphic fileref="imagenes/install12.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+ 
+    </section>
+
+    <section>
+      <title>DNS primario y DNS secundario</title>
 
       <para>El siguiente paso es configurar la puerta de enlace (también
 	conocido como pasarela o gateway). Ese valor es el IP que
@@ -677,9 +791,7 @@
 
       <graphic fileref="imagenes/install09.png" format="PNG" scale="65" scalefit="1" align="right"/>
 
-    </section>
-    <section>
-      <title>DNS primario y DNS secundario</title>
+
       <para>Si bien el PyMO Server tiene su propio servidor DNS,
 	necesita los DNS del proveedor de Internet para resolver los
 	nombres que no pertenecen a la red local. Los DNS transforman los
