@@ -248,7 +248,7 @@
 	</listitem>
 	<listitem>
 	  <para>
-	    Disquetera de 3 1/2 *
+	    Disquetera de 3 1/2 * 
 	  </para>
 	</listitem>
 	<listitem>
@@ -282,10 +282,6 @@
 	letras griegas, plantas, personajes de ficción, etc.
       </para>
  
-      <para>
-	El nombre del servidor es: __________________________
-      </para>
-
     </section>
 
     <section>
@@ -294,23 +290,26 @@
       <para>
 	Para ordenar los nombres de las máquinas existe una jerarquía,
 	esta jerarquía esta representada en la dirección de
-	dominio. Podemos decir que es la parte que se encuentra a
-	continuación del <emphasis>@</emphasis> en su dirección de
-	correo. Si no se desea la funcionalidad de corre electrónico y
-	no se piensa conectarse a Internet, se puede crear un nombre
-	de fantasía.
+	dominio. Un ejemplo de nombre de dominio es la parte que se
+	encuentra a continuación del <emphasis>@</emphasis> en su
+	dirección de correo. Si no se desea la funcionalidad de corre
+	electrónico y no se piensa conectarse a Internet, se puede
+	utilizar un nombre de fantasía.
       </para>
 
       <para>
 	Ejemplos de nombres de dominios son vialibre.org.ar,
-	cordoba.miempresa.com.ar. Sin no posee un dominio y desea
-	conectase a Internet y manejar correo, necesita registrar un
-	dominio, si es un tipo <emphasis>com.ar</emphasis> se lo puede
-	registrar en <emphasis>www.nic.ar</emphasis>.
+	mi-empresa.com.ar. Si desea que su empresa tenga su propio
+	dominio de internet y no posee uno, entonces puede 
+	registrar un dominio. Si es del tipo
+	<emphasis>com.ar</emphasis> se lo puede registrar en
+	<emphasis>www.nic.ar</emphasis>.
       </para>
 
       <para>
-	El nombre de dominio es: __________________________
+	Generalmente los proveedores de internet se encarga de
+	realizar los tramites de registración del dominio a pedido del
+	usuario. Tambien se suelen encargar del mantenimiento del DNS.
       </para>
 
     </section>
@@ -319,17 +318,18 @@
       <title>IP del equipo y mascara de red</title>
 
       <para>
-	Cada máquina esta identificada en la red por un número. En una
-	red IP este número esta formado por cuatro números que van
-	desde el 0 al 255 y estan separados por un punto.
+	Como explicamos antes, cada máquina esta identificada en la
+	red por un número. En una red IP (version 4) este número esta
+	formado por cuatro números que van desde el 0 al 255 y estan
+	separados por un punto.
       </para>
 
       <para>
 	Para determinar cuando uno de esos números pertenece o no a
 	nuestra red local se utiliza la <emphasis>Mascara de
-	Red</emphasis> que es otro numero como el IP, pero que tiene
-	como fin marcar cuales son las que estan directamente
-	conectadas y cuales no.
+	Red</emphasis> que es otro número como el IP, pero que tiene
+	como fin delimitar cuales son las máquinas que estan
+	directamente conectadas y cuales no.
       </para>
 
       <para>
@@ -341,43 +341,40 @@
       </para>
 
       <para>
-	Los números IP se dividen en dos grandes grupos, los públicos
-	y los privados. Los IP públicos son los que se utilizan para
-	las máquinas que estan conectadas directamente a Internet y se
-	los proveen los prestadores se servicios de Internet. Los IP
-	privados son para que sean utilizados en redes locales que no
-	estan directamente conectadas a Internet. En el mundo solo
-	puede haber 1 máquina que tenga un determinado IP publico,
-	pero puede haber muchas máquinas que tenga el mismo IP
-	privado, siempre que no estén en la misma red local.
+	A los números de IP los vamos a dividir en dos grandes grupos,
+	los <emphasis>públicos</emphasis> y los
+	<emphasis>privados</emphasis>. Los IP públicos son los que se
+	utilizan para las máquinas que estan conectadas directamente a
+	Internet y se los proveen los prestadores se servicios de
+	Internet. Los IP privados son utilizados en mayormente en
+	redes locales que no estan directamente conectadas a
+	Internet. La principal diferencia entre ambos tipos es que
+	solo puede haber 1 máquina que tenga un determinado IP
+	publico, pero puede haber muchas máquinas que tenga el mismo
+	IP privado, siempre que no estén en la misma red local.
       </para>
 
       <para>
 	Los IP privados son los que comienzan con 10.x.x.x, 172.16.x.x
-	al 172.31.x.x y los 192.168.x.x, donde X es un numero que va
-	entre 1 y 254. Pero que paso con el 0 y el 255? La dirección
-	que lleva el 0 se la conoce como "dirección de red" y la que
-	tiene el 255 se la llama "dirección de broadcast". En lo que
-	respecta a nosotros, simplemente no podemos utilizarlas.
+	al 172.31.x.x y los 192.168.x.x, donde X es un número que va
+	entre 0 y 255. 
       </para>
 
       <para>
-	Para todas las configuraciones que provee el servidor se
-	plantea un esquema en donde las máquinas esta conectadas
-	armando una red privada y que las máquinas (estaciones de
-	trabajo) no estan conectadas directamente a Internet. Esto es
-	por una cuestión de seguridad.
+	Para todas las configuraciones que provee PyMO Server se
+	plantea un esquema en donde las máquinas (estaciones de
+	trabajo) esta conectadas mediante una red con IP privada y que
+	las máquinas no estan conectadas directamente a Internet. Esto
+	es por una cuestión de seguridad.
       </para>
 
       <para>
 	Si para este punto todavía esta mareado y no sabe que elegir,
 	no se preocupe el servidor en el momento de la instalación le
-	va a sugerir una configuración en forma predeterminada.
-      </para>
-
-      <para>
-	En numero de IP es: _____._____._____._____ y la mascara de
-	red es: _____._____._____._____
+	va a sugerir una configuración en forma predeterminada. Lo
+	único que necesita saber es si se va a conectar a internet y
+	de que modo lo va a hacer, para lo cual puede obtener más
+	información de la proxima sección.
       </para>
 
     </section>
@@ -436,9 +433,6 @@
 	  </listitem>
 	  <listitem>
 	    <para>Password</para>
-	  </listitem>
-	  <listitem>
-	    <para>El SMTP del proveedor de Internet</para>
 	  </listitem>
 	</itemizedlist>
 
@@ -504,6 +498,12 @@
 	  Internet.
 	</para>
 
+	<para>
+	  Algunos proveedores de internet suministras automaticamente
+	  esta información a travez de un protocolo llamado DHCP, por
+	  lo que no necesita cargar esta información a mano.
+	</para>
+
       </section>
 
       <section>
@@ -540,19 +540,12 @@
 	  <listitem>
 	    <para>La puerta de enlace de la red local.</para>
 	  </listitem>
-	  <listitem>
-	    <para>El SMTP del proveedor de internet</para>
-	  </listitem>
 	</itemizedlist>
 
 	<para>
 	  La puerta de enlace en el número de IP que tiene la máquina
-	  que nos provee la conexión local (suele ser una máquina o un
-	  router con una conexión como un ADSL o algo parecido)
-	</para>
-
-	<para>
-	  El SMTP hay que pedírselo al proveedor de Internet.
+	  que nos provee la conexión local (suele ser una computadora o un
+	  router que esta conectado con el modem ADSL u otro tipo de conexión)
 	</para>
 
       </section>
