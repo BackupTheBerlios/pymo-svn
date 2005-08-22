@@ -879,49 +879,154 @@
 	</para>
       </caution>
 
-      <para>Para particionar el disco el instalador nos da 2 opciones.
-	Una es dejar que el instalador lo haga solo, y la otra es
-	realizar las particiones en forma manual. Se recomiendo dejar
-	que particione automaticamete. Esto borra
-	<emphasis>TODO</emphasis> el contenido del disco y lo deja
-	listo para comenzar la instalación.
+      <para>
+	Lo primero que tenemos que hacer es elejir el disco en donde
+	vamos a realizar la instalacion. El menú nos permite ejejir
+	entre todos los discos que tiene el sistema.
+      </para>
+
+
+      <graphic fileref="imagenes/install18.png" format="PNG"
+	       scale="65" scalefit="1" align="right"/>
+
+      <para>
+	Recuerde que esto borra <emphasis>TODO</emphasis> el contenido
+	del disco y lo deja listo para comenzar la instalación. Por
+	ende se pide que confirme que desea realizar la operación.
        </para>
 
-      <graphic fileref="imagenes/install12.png" format="PNG" scale="65" scalefit="1" align="right"/>
 
-      <para>Una vez seleccionado como queremos que sea particionado el
-	disco, en nuestro caso hemos seleccionado
-	<emphasis>automático</emphasis>, nos pide confirmación antes
-	de proceder.
+      <graphic fileref="imagenes/install19.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+      <para>
+	Nuevamente nos advierte sobre que estamos por borrar todo lo
+	que hay en el disco. Esta es la última oportunidad para
+	arrepentirse.
       </para>
 
-      <graphic fileref="imagenes/install13.png" format="PNG" scale="65" scalefit="1" align="right"/>
+      <graphic fileref="imagenes/install20.png" format="PNG"
+	       scale="65" scalefit="1" align="right"/>
 
-      <para>Nuevamente nos advierte sobre que estamos por borrar todo
-	lo que hay en el disco.
+      <para>
+	Una vez que el instalador terminó de realizar el particionado
+	del disco y la creacion de los sistema de archivos, se
+	comienza a copiar los archivos.
       </para>
 
-      <graphic fileref="imagenes/install14.png" format="PNG" scale="65" scalefit="1" align="right"/>
+      <graphic fileref="imagenes/install21.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
 
-      <para>Finalizado la repartición del disco y el formateado de
-	todas las unidades, el instalador comienza a copiar los
-	archivos.
+      <para>
+	Cuando termina de copiar los archivos nos muestra un cartel
+	avisandonos que el servidor ya se encuentra intalado en el
+	disdo.
       </para>
 
-      <graphic fileref="imagenes/install15.png" format="PNG" scale="65" scalefit="1" align="right"/>
+      <graphic fileref="imagenes/install22.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
 
       </section>
       
     <section>
-      <title>Final de instalación</title>
-      <para>Cuando termina de copiar los archivos, nos muestra una
+      <title>Contraseñas</title>
+
+      <para>
+	Antes de terminar tenemos que establecer las contraseñas. El
+	sistema requiere dos, una es la de <emphasis>root</emphasis> y
+	otra es la de <emphasis>admin</emphasis>.
+      </para>
+
+      <graphic fileref="imagenes/install23.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+      <para>
+	La primera clave que nos pregunta es la de
+	<emphasis>root</emphasis>. Este usuario se utiliza para
+	realizar modificaciones y tareas administrativas que requieren
+	acceder directamente en el servido.
+      </para>
+
+      <graphic fileref="imagenes/install24.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+
+      <para>
+	La segunda clave que nos pregunta es la de
+	<emphasis>admin</emphasis>. Este usuario se utiliza para
+	acceder a la interface web para crear usuarios y grupos,
+	setear direcciones de correo electronico y otras tareas.
+      </para>
+
+      <graphic fileref="imagenes/install25.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+      <para>
+	Cuando se tipea la clave no se ve, ni muestra ningun
+	caracter. Una vez tipeada le va a pedir que la ingrese
+	nuevamente para asegurarse que sea correcta.
+      </para>
+
+      <graphic fileref="imagenes/install26.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+      <graphic fileref="imagenes/install27.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+
+    </section>
+
+    <section>
+      <title>Comfiguración del proxy y el acceso a internet</title>
+
+      <para>
+	A continuación tenemos las opciones para configurar el proxy y
+	el acceso a internet a los usuarios. Segun sea el tipo de
+	conexión elejida durante la instalación seran las opciones que
+	tenemos.
+      </para>
+
+      <section>
+	<title>Para conexión tipo dedicado</title>
+
+	<para>
+	</para>
+      
+      </section>
+
+    </section>
+
+    <section>
+      <title>Fin de la instalación</title>
+
+      <para>
+	Una vez terminado la instalacion nos muestra una
 	pantalla recordándonos que leamos la documentación de como
 	administrar el servidor. Presionamos
 	<emphasis>enter</emphasis> y eso reinicia el equipo. Retiramos
-	el CD y dejamos que inicie el sistema por primera vez-
+	el CD y dejamos que inicie el sistema por primera vez.
       </para>
 
-      <graphic fileref="imagenes/install16.png" format="PNG" scale="65" scalefit="1" align="right"/>
+      <graphic fileref="imagenes/install33.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+      <para>
+	Si la instalación pudo copiar correctamente los archivos y
+	configurar correctamente para que el disco arraque, deberia
+	ver unas pantallas como las siguientes.
+      </para>
+
+      <graphic fileref="imagenes/install34.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+      <graphic fileref="imagenes/install35.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+      <para>
+	Recuerde leer la documentación sobre como administrar el
+	servidor.
+      </para>
+
     </section>
 
   </chapter>
