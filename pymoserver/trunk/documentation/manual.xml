@@ -29,19 +29,20 @@
       <title>Acerca de esta distribución y agradecimientos</title>
 
       <para>
-	Esta compilación de programas especialmente dirigida Pequeñas
-	y Medianas Organizaciones es el resultado del trabajo del
-	equipo de la Fundación Vía Libre y es parte del Proyecto de
-	Apoyo a Pequeñas y Medianas Organizaciones que actualmente
+	Esta compilación de programas especialmente dirigida a
+	Pequeñas y Medianas Organizaciones es el resultado del trabajo
+	del equipo de la Fundación Vía Libre y es parte del Proyecto
+	de Apoyo a Pequeñas y Medianas Organizaciones que actualmente
 	está ejecutando. Este proyecto es posible gracias al aporte de
 	distintas organizaciones, tales como: Fundación AVINA,
-	Universidad Blas Pascal, Sun Microsystems y donantes privados.
+	Universidad Blas Pascal, Sun Microsystems, Foncyt y donantes
+	privados.
       </para>
 
     </section>
 
     <section>
-      <title>El porque del PyMO Server.</title>
+      <title>El por qué del PyMO Server.</title>
 
       <para>
 	Nuestra sociedad alberga miles de emprendimientos de distinta
@@ -69,16 +70,15 @@
       <para>
 	Por otro lado, algunos emprendimientos seguramente cuentan con
 	los recursos económicos para hacerlo, pagando por el derecho
-	de uso de software propietario. Al hacerlo estos
-	emprendimientos están siempre en una situación de dependencia
-	tecnológica permanente, al tener que recurrir siempre a un
-	solo proveedor para obtener alguna solución a sus problemas
-	informáticos.
+	de uso de software privativo. Al hacerlo estos emprendimientos
+	están siempre en una situación de dependencia tecnológica
+	permanente, teniendo que recurrir siempre a un solo proveedor
+	para obtener alguna solución a sus problemas informáticos.
       </para>
 
       <para>
 	Utilizando Software Libre ambos problemas se solucionan y los
-	emprendimientos pasan, por un lado a poder elegir libremente
+	emprendimientos pasan, por un lado, a poder elegir libremente
 	entre distintas opciones de Software, y por otro a poder
 	nutrirse de una inmensa colección de programas de computadoras
 	que ya están libres y gratis en Internet.
@@ -86,7 +86,7 @@
 
       <para>
 	El PyMO Server es una selección de software libre basado en la
-	distribución DEBIAN GNU/Linux versión 3.1 denominada Sarge ya
+	distribución Debian GNU/Linux versión 3.1 denominada "Sarge" ya
 	existente en Internet. Esta selección tiene por objetivo
 	facilitar el proceso de instalación y puesta en marcha de un
 	servidor informático con las funcionalidades más usadas en el
@@ -104,18 +104,9 @@
 	  <para>Correo electrónico</para>
 	</listitem>
 	<listitem>
-	  <para>Compartir la conexión de internet</para>
+	  <para>Acceso a internet compartido</para>
 	</listitem>
       </itemizedlist>
-
-      <para>
-	Utilizando esta selección los emprendimientos está liberándose
-	tecnológicamente y aprovechando la inmensa colección de
-	software existente pero que carecía de la de fue pensado para
-	ayudar a estas empresas y organizaciones a montar una
-	infraestructura informática eficiente, estable y económica
-	basada en Software Libre.
-      </para>
 
     </section>
 
@@ -131,7 +122,7 @@
 	<listitem>
 	  <para>
 	    Servidor de DNS preconfigurado para manejar el
-	    dominio local que se configuro en en momento de la
+	    dominio local que se configuró en el momento de la
 	    instalación.
 	  </para>
 	</listitem>
