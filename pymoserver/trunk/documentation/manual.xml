@@ -104,7 +104,7 @@
 	  <para>Correo electrónico</para>
 	</listitem>
 	<listitem>
-	  <para>Acceso a internet compartido</para>
+	  <para>Acceso a Internet compartido</para>
 	</listitem>
       </itemizedlist>
 
@@ -147,19 +147,19 @@
 	  <para>
 	    Almacenamiento centralizado de usuarios y contraseñas y
 	    autenticación de usuarios en máquinas Linux, BSDs y Unix
-	    via LDAP.
+	    vía LDAP.
 	  </para>
 	</listitem>
 	<listitem>
 	  <para>
 	    Servidor proxy para compartir y/o acelerar la
 	    navegación. Incluye la posibilidad de filtrar contenido
-	    indeseado y autenticación para permitir el uso de internet
+	    indeseado y autenticación para permitir el uso de Internet
 	  </para>
 	</listitem>
 	<listitem>
 	  <para>
-	    Administración de usuarios y recursos via un entorno web.
+	    Administración de usuarios y recursos vía un entorno web.
 	  </para>
 	</listitem>
 	
@@ -291,16 +291,16 @@
       <para>
 	Ejemplos de nombres de dominios son vialibre.org.ar,
 	mi-empresa.com.ar. Si desea que su empresa tenga su propio
-	dominio de internet y no posee uno, entonces puede 
+	dominio de Internet y no posee uno, entonces puede 
 	registrar un dominio. Si es del tipo
 	<emphasis>com.ar</emphasis> se lo puede registrar en
 	<emphasis>www.nic.ar</emphasis>.
       </para>
 
       <para>
-	Generalmente los proveedores de internet se encarga de
+	Generalmente los proveedores de Internet se encarga de
 	realizar los tramites de registración del dominio a pedido del
-	usuario. Tambien se suelen encargar del mantenimiento del DNS.
+	usuario. También se suelen encargar del mantenimiento del DNS.
       </para>
 
     </section>
@@ -310,8 +310,8 @@
 
       <para>
 	Como explicamos antes, cada máquina esta identificada en la
-	red por un número. En una red IP (version 4) este número esta
-	formado por cuatro números que van desde el 0 al 255 y estan
+	red por un número. En una red IP (versión 4) este número esta
+	formado por cuatro números que van desde el 0 al 255 y están
 	separados por un punto.
       </para>
 
@@ -319,7 +319,7 @@
 	Para determinar cuando uno de esos números pertenece o no a
 	nuestra red local se utiliza la <emphasis>Mascara de
 	Red</emphasis> que es otro número como el IP, pero que tiene
-	como fin delimitar cuales son las máquinas que estan
+	como fin delimitar cuales son las máquinas que están
 	directamente conectadas y cuales no.
       </para>
 
@@ -335,10 +335,10 @@
 	A los números de IP los vamos a dividir en dos grandes grupos,
 	los <emphasis>públicos</emphasis> y los
 	<emphasis>privados</emphasis>. Los IP públicos son los que se
-	utilizan para las máquinas que estan conectadas directamente a
+	utilizan para las máquinas que están conectadas directamente a
 	Internet y se los proveen los prestadores se servicios de
 	Internet. Los IP privados son utilizados en mayormente en
-	redes locales que no estan directamente conectadas a
+	redes locales que no están directamente conectadas a
 	Internet. La principal diferencia entre ambos tipos es que
 	solo puede haber 1 máquina que tenga un determinado IP
 	publico, pero puede haber muchas máquinas que tenga el mismo
@@ -355,7 +355,7 @@
 	Para todas las configuraciones que provee PyMO Server se
 	plantea un esquema en donde las máquinas (estaciones de
 	trabajo) esta conectadas mediante una red con IP privada y que
-	las máquinas no estan conectadas directamente a Internet. Esto
+	las máquinas no están conectadas directamente a Internet. Esto
 	es por una cuestión de seguridad.
       </para>
 
@@ -363,9 +363,9 @@
 	Si para este punto todavía esta mareado y no sabe que elegir,
 	no se preocupe el servidor en el momento de la instalación le
 	va a sugerir una configuración en forma predeterminada. Lo
-	único que necesita saber es si se va a conectar a internet y
+	único que necesita saber es si se va a conectar a Internet y
 	de que modo lo va a hacer, para lo cual puede obtener más
-	información de la proxima sección.
+	información de la próxima sección.
       </para>
 
     </section>
@@ -410,7 +410,7 @@
         <para>
 	  En este caso el servidor actúa como firewall. Si activa la
 	  opción de compartir Internet, permite que los usuarios que
-	  estan en la red local pueden acceder también a Internet.
+	  están en la red local pueden acceder también a Internet.
 	</para>
 
 	<para>
@@ -447,7 +447,7 @@
 	<para>
 	  En esta configuración se permite que haya máquinas que estén
 	  en la red privada y en la red publica, aunque no se
-	  aconseja, porque las máquinas que estan en la red publicas
+	  aconseja, porque las máquinas que están en la red publicas
 	  pueden ser atacadas y comprometer la seguridad de toda la
 	  red.
 	</para>
@@ -455,7 +455,7 @@
         <para>
 	  En este caso el servidor actúa como firewall entre ambas
 	  redes. Si activa la opción de compartir Internet, permite
-	  que los usuarios que estan en la red local pueden acceder
+	  que los usuarios que están en la red local pueden acceder
 	  también a Internet.
 	</para>
 
@@ -490,7 +490,7 @@
 	</para>
 
 	<para>
-	  Algunos proveedores de internet suministras automaticamente
+	  Algunos proveedores de Internet suministras automáticamente
 	  esta información a travez de un protocolo llamado DHCP, por
 	  lo que no necesita cargar esta información a mano.
 	</para>
@@ -545,13 +545,13 @@
 	<title>Sin conexión a Internet</title>
 
 	<para>
-	  Si no dispone una conexión a internet o no desea utilizar
-	  las funcionalidades que requieren de internet, puede elejir
-	  no configurar un acceso a internet.
+	  Si no dispone una conexión a Internet o no desea utilizar
+	  las funcionalidades que requieren de Internet, puede elegir
+	  no configurar un acceso a Internet.
 	</para>
 
 	<para>
-	  El servicio de correo electrónico no se desabilita si elije
+	  El servicio de correo electrónico no se deshabilita si elije
 	  esta opción, pero queda restringido a uso interno.
 	</para>
 
@@ -566,7 +566,7 @@
 
     <para>
       En esta sección vamos a mostrar una instalación típica paso a
-      paso, y vamos a utilizar los siguientes pararmetros para nuestra
+      paso, y vamos a utilizar los siguientes parámetros para nuestra
       instalación:
     </para>
 
@@ -603,7 +603,7 @@
 	máquina e insertamos el CD en la lectora. Si la computadora no
 	esta configurada para arrancar de CD hay que entrar el
 	programa de configuración de la misma y cambiar esa
-	opcion. Esto depende de cada máquina, pero la información de
+	opción. Esto depende de cada máquina, pero la información de
 	como hacerlo esta en el manual de la placa madre.
       </para>
 
@@ -645,8 +645,8 @@
 	       scale="65" scalefit="1" align="right"/>
 
       <para>
-	Luego nos pide el pais, que tiene que estar en formato de 2
-	letras y en mayuscula. Si no ingrasa ningun valor y presiona
+	Luego nos pide el país, que tiene que estar en formato de 2
+	letras y en mayúscula. Si no ingresa ningún valor y presiona
 	ENTER, por defecto se asumirá AR (Argentina)
       </para>
 
@@ -655,8 +655,8 @@
 
       <para>
 	Es siguiente punto es preguntar el nombre de la provincia, en
-	otros paises se conocido como estado. Si presiona ENTER se
-	asumirá Cordoba.
+	otros países se conocido como estado. Si presiona ENTER se
+	asumirá Córdoba.
       </para>
 
       <graphic fileref="imagenes/install06.png" format="PNG" 
@@ -664,14 +664,14 @@
 
       <para>
 	Finalmente nos pide la ciudad. Al igual que en el caso
-	anterior, si presiona ENTER se asumirá Cordoba.
+	anterior, si presiona ENTER se asumirá Córdoba.
       </para>
 
       <graphic fileref="imagenes/install07.png" format="PNG" 
 	       scale="65" scalefit="1" align="right"/>
 
       <para>
-	En este ejemplo siempre hemos completado el campo, ahunque con
+	En este ejemplo siempre hemos completado el campo, aunque con
 	los mismos valores que los por defecto.
       </para>
     </section>
@@ -696,7 +696,7 @@
 
       <para>
 	Luego nos pide el dominio, acá tenemos que poner lo que
-	elejios cuando leíamos los pre-requisitos. Recuerde que este
+	elegió cuando leíamos los pre-requisitos. Recuerde que este
 	dato es fundamental para que funcione el correo electrónico.
       </para>
 
@@ -710,7 +710,7 @@
       </section>
 
       <section>
-      <title>Tipo de conexión a internet y dirección de IP privada</title>
+      <title>Tipo de conexión a Internet y dirección de IP privada</title>
 
       <para>
 	El siguiente paso es elegir la forma que vamos a utilizar
@@ -720,7 +720,7 @@
 
       <para>
 	Recuerde que parte del funcionamiento y las preguntas
-	subsiguientes dependeran de la opción que elija aca.
+	subsiguientes dependerán de la opción que elija acá.
       </para>
 
       <graphic fileref="imagenes/install10.png" format="PNG" 
@@ -728,18 +728,18 @@
 
       <tip>
 	<para>
-	  Si no sabe que elejir en este punto y luego de revisar
-	  nuevamente la unidad de pre-requisitos, todabia no sabe que
-	  elejir, consulte con alguin que tenga conocimiento del
-	  tema. Si esto no fuera posible, una opcion medianamente
-	  segura sería elejir el tipo <emphasis>Local</emphasis>.
+	  Si no sabe que elegir en este punto y luego de revisar
+	  nuevamente la unidad de pre-requisitos, todavía no sabe que
+	  elegir, consulte con alguien que tenga conocimiento del
+	  tema. Si esto no fuera posible, una opción medianamente
+	  segura sería elegir el tipo <emphasis>Local</emphasis>.
 	</para>
       </tip>
 
       <para>
 	Sin importar lo que hayamos seleccionado como conexión a
-	internet, el equipo necesita su propia IP para comunicarse con
-	las máquina que estan en la red. Este numero es el que
+	Internet, el equipo necesita su propia IP para comunicarse con
+	las máquina que están en la red. Este numero es el que
 	identifica al servidor en la <emphasis>Red Local</emphasis>, y
 	deber ser único.
       </para>
@@ -753,7 +753,7 @@
 	       scale="65" scalefit="1" align="right"/>
 
       <para>
-	En este manual elejimos poner 192.168.1.1
+	En este manual elegimos poner 192.168.1.1
       </para>
 
       <para>
@@ -774,8 +774,8 @@
 	<title>Para conexión tipo dedicado</title>
 
 	<para>
-	  El siguiente paso es configurar los parametros de red de la
-	  conexión a internet. A continuación se pide ingresar el
+	  El siguiente paso es configurar los parámetros de red de la
+	  conexión a Internet. A continuación se pide ingresar el
 	  número de IP.
 	</para>
 
@@ -783,7 +783,7 @@
 		 scale="65" scalefit="1" align="right"/>
 
 	<para>
-	  El segundo parametro es la mascara de red de la conexión.
+	  El segundo parámetro es la mascara de red de la conexión.
 	</para>
 
 	<graphic fileref="imagenes/install14.png" format="PNG" 
@@ -791,7 +791,7 @@
 
 	<para>
 	  Finalmente se pide ingresar el número de IP de la puerta de
-	  enlaca. Esta IP también es conocido como gateway o pasarela.
+	  enlace. Esta IP también es conocido como gateway o pasarela.
 	</para>
 
 	<graphic fileref="imagenes/install15.png" format="PNG" 
@@ -865,14 +865,14 @@
 	<para>
 	  A partir de ahora el instalador va a escribir en el
 	  disco. Si algo falla se puede perder todo los datos que
-	  estan en el mismo. Lea atentamente los mensajes y
+	  están en el mismo. Lea atentamente los mensajes y
 	  refleccione antes de elegir algo.
 	</para>
       </caution>
 
       <para>
-	Lo primero que tenemos que hacer es elejir el disco en donde
-	vamos a realizar la instalacion. El menú nos permite ejejir
+	Lo primero que tenemos que hacer es elegir el disco en donde
+	vamos a realizar la instalación. El menú nos permite ejejir
 	entre todos los discos que tiene el sistema.
       </para>
 
@@ -901,7 +901,7 @@
 
       <para>
 	Una vez que el instalador terminó de realizar el particionado
-	del disco y la creacion de los sistema de archivos, se
+	del disco y la creación de los sistema de archivos, se
 	comienza a copiar los archivos.
       </para>
 
@@ -910,8 +910,8 @@
 
       <para>
 	Cuando termina de copiar los archivos nos muestra un cartel
-	avisandonos que el servidor ya se encuentra intalado en el
-	disdo.
+	avisándonos que el servidor ya se encuentra instalado en el
+	disco.
       </para>
 
       <graphic fileref="imagenes/install22.png" format="PNG" 
@@ -945,15 +945,15 @@
       <para>
 	La segunda clave que nos pregunta es la de
 	<emphasis>admin</emphasis>. Este usuario se utiliza para
-	acceder a la interface web para crear usuarios y grupos,
-	setear direcciones de correo electronico y otras tareas.
+	acceder a la interfase web para crear usuarios y grupos,
+	setear direcciones de correo electrónico y otras tareas.
       </para>
 
       <graphic fileref="imagenes/install25.png" format="PNG" 
 	       scale="65" scalefit="1" align="right"/>
 
       <para>
-	Cuando se tipea la clave no se ve, ni muestra ningun
+	Cuando se tipea la clave no se ve, ni muestra ningún
 	caracter. Una vez tipeada le va a pedir que la ingrese
 	nuevamente para asegurarse que sea correcta.
       </para>
@@ -968,12 +968,12 @@
     </section>
 
     <section>
-      <title>Comfiguración del proxy y el acceso a internet</title>
+      <title>Configuración del proxy y el acceso a Internet</title>
 
       <para>
 	A continuación tenemos las opciones para configurar el proxy y
-	el acceso a internet a los usuarios. Segun sea el tipo de
-	conexión elejida durante la instalación seran las opciones que
+	el acceso a Internet a los usuarios. Según sea el tipo de
+	conexión elegida durante la instalación serán las opciones que
 	tenemos.
       </para>
 
@@ -991,7 +991,7 @@
       <title>Fin de la instalación</title>
 
       <para>
-	Una vez terminado la instalacion nos muestra una
+	Una vez terminado la instalación nos muestra una
 	pantalla recordándonos que leamos la documentación de como
 	administrar el servidor. Presionamos
 	<emphasis>enter</emphasis> y eso reinicia el equipo. Retiramos
@@ -1003,7 +1003,7 @@
 
       <para>
 	Si la instalación pudo copiar correctamente los archivos y
-	configurar correctamente para que el disco arraque, deberia
+	configurar correctamente para que el disco arranque, debería
 	ver unas pantallas como las siguientes.
       </para>
 
@@ -1023,23 +1023,148 @@
   </chapter>
 
   <chapter>
-    <title>Administración de usuarios</title> 
-    <para>En este capitulo veremos como manejar los usuarios. La
+    <title>Administración de usuarios y grupos</title> 
+
+    <para>
+      En este capitulo veremos como manejar los usuarios. La
       administración de usuarios consiste básicamente en agregar y
       eliminar usuarios, agregar y eliminar grupos y asignar usuarios
-      a grupos específicos.</para>
+      a grupos específicos.
+    </para>
+
+    <para>
+      Este capitulo no pretende explicar todas las opciones que se
+      pueden modificar desde la interfaz administrativa, sino las que
+      son básicas y necesarias para el trabajo diario. Incluso algunas
+      de las opciones que están en la interfase de administración no
+      están implementadas todavía.
+    </para>
+
+    <para>
+      La administración de usuarios y grupos se hace a travez de una
+      herramienta web llamada "GOsa". Para entrar necesita poner en un
+      navegador web: https://nombre_servidor.dominio/gosa/
+    </para>
+
+    <para>
+      Para este ejemplo sería: https://servidor.ejemplo.com.ar/gosa/
+    </para>
+
+    <tip>
+      <para>
+	Si con esa dirección no funciona, pruebe entrar con:
+	https://172.16.1.1/gosa/, si el IP que se asigno al servidor
+	es distinto, reemplace 172.16.1.1 por el valor que haya puesto.
+      </para>
+    </tip>
+
+    <para>
+      Al ingresar, va a encontrarse con una pantalla como se muestra a
+      continuación.
+    </para>
+
+    <graphic fileref="imagenes/usuarios01.png" format="PNG" 
+	     scale="65" scalefit="1" align="right"/>
+
+    <para>
+      Para realizar las distintas tareas hay que entrar con el
+      usuario: <emphasis>admin</emphasis>, la clave es la que
+      ingresamos como clave de ldap durante la instalación.
+    </para>
+
+    <graphic fileref="imagenes/usuarios02.png" format="PNG" 
+	     scale="65" scalefit="1" align="right"/>
+ 
+    <para>
+      Al entrar nos muestra la siguiente pantalla desde la cual
+      podemos realizar las tareas de administración de usuarios.
+    </para>
+
+    <graphic fileref="imagenes/usuarios03.png" format="PNG" 
+	     scale="65" scalefit="1" align="right"/>
+
     <section>
       <title>Como crear usuarios</title>
       
-      <para>Para crear un usuario entramos con el usuario
-      <emphasis>root</emphasis> y vamos al directocio
-      <emphasis>ldap</emphasis>. Ahi ejecutamos:
-      <emphasis>./ldap-useradd.sh nombre_usuario clave Nombre
-      Apellido</emphasis>, el programa nos pide la clave del
-      administrador ldap 2 veces.</para>
+      <para>
+	En el menú de Administración, seleccionamos
+	<emphasis>Usuarios</emphasis>, esto trae el listado de
+	usuario. Al fondo del listado elegimos
+	<emphasis>Nuevo</emphasis>.
+      </para>
 
-      <para>Por ejemplo: <emphasis>./ldap-useradd.sh jperez contraseña
-      Juan Perez</emphasis></para>
+      <graphic fileref="imagenes/usuarios04.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+     
+      <para>
+	La información sobre el usuario esta dividida en solapas según
+	el tipo de cuenta que se desea crear. Se pueden crear los
+	siguientes tipos de cuentas:
+      </para> 
+
+      <itemizedlist  mark="bullet" spacing="compact">
+	<listitem>
+	  <para>Genérica</para>
+	</listitem>
+	<listitem>
+	  <para>De correo electrónico (depende de Genérica)</para>
+	</listitem>
+	<listitem>
+	  <para>De usuario Unix (depende de Genérica)</para>
+	</listitem>
+	<listitem>
+	  <para>De usuario windows (depende de Genérica y Unix)</para>
+	</listitem>
+	<listitem>
+	  <para>De acceso a Internet vía proxy (depende de Genérica )</para>
+	</listitem>
+      </itemizedlist>
+
+      <para>
+	En este ejemplo vamos a crear un usuario con todos los accesos.
+      </para>
+
+      <para>
+	La primer solapa nos permite cargar datos genéricos sobre el
+	usuario. Hay 3 campos que son obligatorios que son: "Name",
+	"Given Name" y "Login".
+      </para>
+
+      <para>En el campo "Name" hay que poner el apellido, en el campo
+      "Given Name" hay que poner el nombre. En "Login" hay que poner
+      un nombre único todo en minúscula que represente al
+      usuario. 
+      </para>
+
+      <para>
+	Para este campo de "Login" se suele utilizar la primera letra
+	del nombre y el apellidos completo, esto es lo que usaremos
+	para este ejemplo. Otros prefieren el nombre y el apellido
+	juntos, o simplemente el nombre o un apodo.
+      </para>
+
+      <graphic fileref="imagenes/usuarios05.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+      <para>
+	Una vez completado los datos Genéricos, nos cambiamos a la
+	pestaña de UNIX y pulsamos en el botón para crear la cuenta de
+	usuarios Unix.
+      </para>
+
+      <graphic fileref="imagenes/usuarios05.png" format="PNG" 
+	       scale="65" scalefit="1" align="right"/>
+
+      <para>
+	En el campo "Home Directory" hay que poner la ruta completa
+	del directorio que contendrá los archivos del usuario. Este
+	directorio tiene que ser: /home/<emphasis>login</emphasis>,
+	donde <emphasis>login</emphasis> es el nombre de usuario que
+	completamos en la pantalla anterior. En nuestro caso sera: "/home/jperez"
+      </para>
+
+      <para>
+      </para>
 
     </section>
     <section>
