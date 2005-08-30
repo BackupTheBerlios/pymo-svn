@@ -1064,7 +1064,7 @@
     </para>
 
     <graphic fileref="imagenes/usuarios01.png" format="PNG" 
-	     scale="65" scalefit="1" align="right"/>
+	     scale="55" scalefit="1" align="right"/>
 
     <para>
       Para realizar las distintas tareas hay que entrar con el
@@ -1081,7 +1081,7 @@
     </para>
 
     <graphic fileref="imagenes/usuarios03.png" format="PNG" 
-	     scale="65" scalefit="1" align="right"/>
+	     scale="45" scalefit="1" align="right"/>
 
     <section>
       <title>Como crear usuarios</title>
@@ -1094,7 +1094,7 @@
       </para>
 
       <graphic fileref="imagenes/usuarios04.png" format="PNG" 
-	       scale="65" scalefit="1" align="right"/>
+	       scale="55" scalefit="1" align="right"/>
      
       <para>
 	La información sobre el usuario esta dividida en solapas según
@@ -1144,7 +1144,7 @@
       </para>
 
       <graphic fileref="imagenes/usuarios05.png" format="PNG" 
-	       scale="65" scalefit="1" align="right"/>
+	       scale="55" scalefit="1" align="right"/>
 
       <para>
 	Una vez completado los datos Genéricos, nos cambiamos a la
@@ -1152,8 +1152,8 @@
 	usuarios Unix.
       </para>
 
-      <graphic fileref="imagenes/usuarios05.png" format="PNG" 
-	       scale="65" scalefit="1" align="right"/>
+      <graphic fileref="imagenes/usuarios06.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
 
       <para>
 	En el campo "Home Directory" hay que poner la ruta completa
@@ -1163,10 +1163,112 @@
 	completamos en la pantalla anterior. En nuestro caso sera: "/home/jperez"
       </para>
 
+      <graphic fileref="imagenes/usuarios07.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
       <para>
+	Lo próximo que vamos a crear es la cuenta "Samba". Esta es
+	necesaria para que los usuarios de estaciones windows pueden
+	autenticarse y acceder a sus archivos. Seleccionamos la solapa
+	que dice "Samba" y seleccionamos "Create samba account".
       </para>
 
+      <graphic fileref="imagenes/usuarios08.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
+      <para>
+	En este caso no tenemos campos obligatorios, pero para que
+	automaticamente nos cargue una unidad de red compartida vamos
+	a configurar el campo "Home directory". El formato es:
+	\\<emphasis>nombre_del_servidor</emphasis>\<emphasis>login</emphasis>
+      </para>
+
+      <para>
+	En nuestro ejemplo vamos a usar: \\servidor\jperez
+      </para>
+
+      <graphic fileref="imagenes/usuarios09.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
+      <para>
+	El siguiente paso es la creación de la cuenta de correo,
+	elegimos la pestaña que dice "Mail" y luego "Create mail
+	account".
+      </para>
+
+      <graphic fileref="imagenes/usuarios10.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
+
+      <para>
+	El único campo que es obligatorio es "Primary address", que
+	hay que completarlos con
+	<emphasis>login</emphasis>@<emphasis>nombre_de_dominio</emphasis>. Para
+	nuestro ejemplo sera: jperez@ejemplo.com.ar
+      </para>
+
+      <para>
+	Un campo que no es obligatorio, pero que es necesario es
+	"Quota size" ya que el valor por defecto es 0 y eso impide que
+	los mail se almacenen en la cuenta. Recuerde que este valor
+	esta en Kilobytes y que el espacio asignado debe ser suficente
+	para contener todos los mails.
+      </para>
+
+      <para>
+	Para este ejemplo también se configuro un dirección de mail
+	alterna.
+      </para>
+
+      <graphic fileref="imagenes/usuarios11.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
+      <para>
+	De las opciones que se presente en el correo nos detendremos
+	en una que es "User is only allowed to send and receive local
+	mails" que restringe la cuenta de mail para que sea solamente
+	interno.
+      </para>
+
+      <graphic fileref="imagenes/usuarios12.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
+      <para>
+	Si durante el proceso de instalación decidimos pedir usuario y
+	contraseña para habilitar la navegación, tenemos que activar
+	este opción lledo a la pestaña "Connectivity" y luego
+	seleccionando la opcion "Proxy account"
+      </para>
+
+      <para>
+	Esta versión de PyMO server no esta implementado el servicio
+	de ftp.
+      </para>
+
+      <graphic fileref="imagenes/usuarios13.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
+      <para>
+	Una vez terminado de completar los datos seleccionamos
+	"Finish" y nos pide que ingresemos la contraseña para el
+	usuario, hay que tipearla en ambos campos y seleccionar "Set
+	password"
+      </para>
+
+      <graphic fileref="imagenes/usuarios14.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+ 
+      <para>
+	Al terminar de crear el usuario, regresamos al listado donde
+	estan todos los usuarios y ahí podemos ver el usuario que
+	acabamos de crear.
+      </para>
+
+      <graphic fileref="imagenes/usuarios15.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
     </section>
+
     <section>
       <title>Como eliminar usuarios</title>
       <para>Falta documentar.</para>
