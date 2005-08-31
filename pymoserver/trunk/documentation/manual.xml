@@ -491,7 +491,7 @@
 
 	<para>
 	  Algunos proveedores de Internet suministras automáticamente
-	  esta información a travez de un protocolo llamado DHCP, por
+	  esta información a través de un protocolo llamado DHCP, por
 	  lo que no necesita cargar esta información a mano.
 	</para>
 
@@ -696,7 +696,7 @@
 
       <para>
 	Luego nos pide el dominio, acá tenemos que poner lo que
-	elegió cuando leíamos los pre-requisitos. Recuerde que este
+	eligió cuando leíamos los pre-requisitos. Recuerde que este
 	dato es fundamental para que funcione el correo electrónico.
       </para>
 
@@ -852,7 +852,7 @@
       <tip>
 	<para>
 	  Si no tiene anotado los números de DNS llame a su proveedor
-	  de Internet y pidaselos.
+	  de Internet y obtenga estos datos.
 	</para>
       </tip>
 
@@ -866,13 +866,13 @@
 	  A partir de ahora el instalador va a escribir en el
 	  disco. Si algo falla se puede perder todo los datos que
 	  están en el mismo. Lea atentamente los mensajes y
-	  refleccione antes de elegir algo.
+	  reflexione antes de elegir algo.
 	</para>
       </caution>
 
       <para>
 	Lo primero que tenemos que hacer es elegir el disco en donde
-	vamos a realizar la instalación. El menú nos permite ejejir
+	vamos a realizar la instalación. El menú nos permite elegir
 	entre todos los discos que tiene el sistema.
       </para>
 
@@ -1041,7 +1041,7 @@
     </para>
 
     <para>
-      La administración de usuarios y grupos se hace a travez de una
+      La administración de usuarios y grupos se hace a través de una
       herramienta web llamada "GOsa". Para entrar necesita poner en un
       navegador web: https://nombre_servidor.dominio/gosa/
     </para>
@@ -1063,16 +1063,16 @@
       continuación.
     </para>
 
-    <graphic fileref="imagenes/usuarios01.png" format="PNG" 
+    <graphic fileref="imagenes/adminweb01.png" format="PNG" 
 	     scale="55" scalefit="1" align="right"/>
 
     <para>
       Para realizar las distintas tareas hay que entrar con el
       usuario: <emphasis>admin</emphasis>, la clave es la que
-      ingresamos como clave de ldap durante la instalación.
+      ingresamos como clave de LDAP durante la instalación.
     </para>
 
-    <graphic fileref="imagenes/usuarios02.png" format="PNG" 
+    <graphic fileref="imagenes/adminweb02.png" format="PNG" 
 	     scale="65" scalefit="1" align="right"/>
  
     <para>
@@ -1080,7 +1080,7 @@
       podemos realizar las tareas de administración de usuarios.
     </para>
 
-    <graphic fileref="imagenes/usuarios03.png" format="PNG" 
+    <graphic fileref="imagenes/adminweb03.png" format="PNG" 
 	     scale="45" scalefit="1" align="right"/>
 
     <section>
@@ -1093,7 +1093,7 @@
 	<emphasis>Nuevo</emphasis>.
       </para>
 
-      <graphic fileref="imagenes/usuarios04.png" format="PNG" 
+      <graphic fileref="imagenes/crearusuario01.png" format="PNG" 
 	       scale="55" scalefit="1" align="right"/>
      
       <para>
@@ -1113,7 +1113,7 @@
 	  <para>De usuario Unix (depende de Genérica)</para>
 	</listitem>
 	<listitem>
-	  <para>De usuario windows (depende de Genérica y Unix)</para>
+	  <para>De usuario Windows (depende de Genérica y Unix)</para>
 	</listitem>
 	<listitem>
 	  <para>De acceso a Internet vía proxy (depende de Genérica )</para>
@@ -1143,7 +1143,7 @@
 	juntos, o simplemente el nombre o un apodo.
       </para>
 
-      <graphic fileref="imagenes/usuarios05.png" format="PNG" 
+      <graphic fileref="imagenes/crearusuario02.png" format="PNG" 
 	       scale="55" scalefit="1" align="right"/>
 
       <para>
@@ -1152,7 +1152,7 @@
 	usuarios Unix.
       </para>
 
-      <graphic fileref="imagenes/usuarios06.png" format="PNG" 
+      <graphic fileref="imagenes/crearusuario03.png" format="PNG" 
 	       scale="55" scalefit="1" align="right"/>
 
       <para>
@@ -1163,22 +1163,22 @@
 	completamos en la pantalla anterior. En nuestro caso sera: "/home/jperez"
       </para>
 
-      <graphic fileref="imagenes/usuarios07.png" format="PNG" 
+      <graphic fileref="imagenes/crearusuario04.png" format="PNG" 
 	       scale="55" scalefit="1" align="right"/>
 
       <para>
 	Lo próximo que vamos a crear es la cuenta "Samba". Esta es
-	necesaria para que los usuarios de estaciones windows pueden
+	necesaria para que los usuarios de estaciones Windows pueden
 	autenticarse y acceder a sus archivos. Seleccionamos la solapa
 	que dice "Samba" y seleccionamos "Create samba account".
       </para>
 
-      <graphic fileref="imagenes/usuarios08.png" format="PNG" 
+      <graphic fileref="imagenes/crearusuario05.png" format="PNG" 
 	       scale="55" scalefit="1" align="right"/>
 
       <para>
 	En este caso no tenemos campos obligatorios, pero para que
-	automaticamente nos cargue una unidad de red compartida vamos
+	automáticamente nos cargue una unidad de red compartida vamos
 	a configurar el campo "Home directory". El formato es:
 	\\<emphasis>nombre_del_servidor</emphasis>\<emphasis>login</emphasis>
       </para>
@@ -1187,7 +1187,7 @@
 	En nuestro ejemplo vamos a usar: \\servidor\jperez
       </para>
 
-      <graphic fileref="imagenes/usuarios09.png" format="PNG" 
+      <graphic fileref="imagenes/crearusuario06.png" format="PNG" 
 	       scale="55" scalefit="1" align="right"/>
 
       <para>
@@ -1196,7 +1196,7 @@
 	account".
       </para>
 
-      <graphic fileref="imagenes/usuarios10.png" format="PNG" 
+      <graphic fileref="imagenes/crearusuario07.png" format="PNG" 
 	       scale="55" scalefit="1" align="right"/>
 
 
@@ -1211,7 +1211,7 @@
 	Un campo que no es obligatorio, pero que es necesario es
 	"Quota size" ya que el valor por defecto es 0 y eso impide que
 	los mail se almacenen en la cuenta. Recuerde que este valor
-	esta en Kilobytes y que el espacio asignado debe ser suficente
+	esta en Kilobytes y que el espacio asignado debe ser suficiente
 	para contener todos los mails.
       </para>
 
@@ -1220,7 +1220,7 @@
 	alterna.
       </para>
 
-      <graphic fileref="imagenes/usuarios11.png" format="PNG" 
+      <graphic fileref="imagenes/crearusuario08.png" format="PNG" 
 	       scale="55" scalefit="1" align="right"/>
 
       <para>
@@ -1230,14 +1230,14 @@
 	interno.
       </para>
 
-      <graphic fileref="imagenes/usuarios12.png" format="PNG" 
+      <graphic fileref="imagenes/crearusuario09.png" format="PNG" 
 	       scale="55" scalefit="1" align="right"/>
 
       <para>
 	Si durante el proceso de instalación decidimos pedir usuario y
 	contraseña para habilitar la navegación, tenemos que activar
-	este opción lledo a la pestaña "Connectivity" y luego
-	seleccionando la opcion "Proxy account"
+	este opción yendo a la pestaña "Connectivity" y luego
+	seleccionando la opción "Proxy account"
       </para>
 
       <para>
@@ -1245,7 +1245,7 @@
 	de ftp.
       </para>
 
-      <graphic fileref="imagenes/usuarios13.png" format="PNG" 
+      <graphic fileref="imagenes/crearusuario10.png" format="PNG" 
 	       scale="55" scalefit="1" align="right"/>
 
       <para>
@@ -1255,16 +1255,16 @@
 	password"
       </para>
 
-      <graphic fileref="imagenes/usuarios14.png" format="PNG" 
+      <graphic fileref="imagenes/crearusuario11.png" format="PNG" 
 	       scale="55" scalefit="1" align="right"/>
  
       <para>
 	Al terminar de crear el usuario, regresamos al listado donde
-	estan todos los usuarios y ahí podemos ver el usuario que
+	están todos los usuarios y ahí podemos ver el usuario que
 	acabamos de crear.
       </para>
 
-      <graphic fileref="imagenes/usuarios15.png" format="PNG" 
+      <graphic fileref="imagenes/crearusuario12.png" format="PNG" 
 	       scale="55" scalefit="1" align="right"/>
 
     </section>
