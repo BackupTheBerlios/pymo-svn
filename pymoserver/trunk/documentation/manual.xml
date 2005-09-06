@@ -1273,22 +1273,139 @@
       <title>Como eliminar usuarios</title>
       <para>Falta documentar.</para>
     </section>
+
     <section>
       <title>Como crear grupos</title>
 
-      <para>Para crear un grupo entramos con el usuario
-      <emphasis>root</emphasis> y vamos al directorio
-      <emphasis>ldap</emphasis>. Ahi ejecutamos:
-      <emphasis>./ldap-groupadd.sh nombre_grupo "integrantes entre
-      comillas si son más de uno"</emphasis></para>
-      
-      <para>Por ejemplo: <emphasis>./ldap-groupadd.sh gerencia "jperez cgomez"</emphasis></para>
+      <para>
+	En el menú de Administración, seleccionamos
+	<emphasis>Grupos</emphasis>, esto nos trae el listado de
+	grupos. En el mismo podemos ver que cada usuario tiene un
+	grupo propio asignado que se creo automáticamente cuando se
+	creo el usuario.
+      </para>
+
+      <graphic fileref="imagenes/creargrupo01.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
+      <para>
+	Para este ejemplo vamos a crear un grupo llamado "ventas" que
+	va a contener a los usuarios que son venderores. Vamos al
+	fondo del listado y elegimos <emphasis>Nuevo</emphasis>.
+      </para>
+
+      <para>
+	La información sobre el grupo esta dividida en solapas según
+	los atributos del grupo, y de los cuales solo nos ocuparemos
+	de algunos que están en Genérica, Mail y ACL
+      </para>
+
+      <graphic fileref="imagenes/creargrupo02.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
+      <para>
+	En la primer solapa tenemos 2 campos que son mandatorios,
+	"Group name" y "Base", de los cuales "Base" tiene un valor por
+	defecto y por ende solo tenemos que ocuparnos de "Group
+	name". Este campo tiene que ser ingresado en minuscula.
+      </para>
+
+      <para>
+	En este ejemplo ademas completamos la descripción y marcamos
+	que es también un grupo valido en samba.
+      </para>
+
+      <para>
+	Para elegir los miembros del grupo, debajo de "Group members"
+	seleccionamos "Add" y eso nos trae el listado de usuario para
+	que marquemos cuales queremos.
+      </para>
+
+      <graphic fileref="imagenes/creargrupo03.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
+      <para>
+	Una vez elegido los miembros, apertamos "Add".
+      </para>
+
+      <para>
+	Esto nos regresa a las solapas del grupo, pero podemos ver los
+	miembros que formaran parte del grupo.
+      </para>
+
+      <tip>
+	<para>
+	  Para elegir varios al mismo tiempo mantenemos presionado
+	  "Ctrl" mientras los seleccionamos con el mouse.
+	</para>
+      </tip>
+
+      <graphic fileref="imagenes/creargrupo04.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
+      <para>
+	A parte de definir grupos de usuarios se puede hacer un "grupo
+	de mail", es decir una dirección de correo electrónico que al
+	recibir un mensaje le manda una copia a cada uno de los
+	usuarios que componen el grupo.
+      </para>
+
+      <graphic fileref="imagenes/creargrupo05.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
+      <para>
+	Seleccionamos "Create mail account" y nos muestra la siguiente
+	pantalla donde tenemos un campo que es obligatorio.
+      </para>
+
+      <para>
+	Siguiendo con el ejemplo ahora vamos a crear una dirección de
+	correo electrónico llamada ventas@ejemplo.com.ar. Este
+	comportamiento en particular es una adaptación de PyMO Server
+	a lo que ofrece la interface de administración via web, por lo que
+	las opciones de "IMAP Shared folders" y de "Quota" no estan
+	disponibles.
+      </para>
+
+
+      <graphic fileref="imagenes/creargrupo06.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
+      <para>
+	La siguiente solapa es la titulada "ACL" que significa "access
+	control list", o en castellano, "Listra de control de
+	acceso". Con esta podemos establecer que atributos puede
+	cambiar los usuario miembros del grupo sobre su datos o los
+	datos del grupo.
+      </para> 
+
+      <para>
+	Para este ejemplo en particular vamos a permitirle a cada
+	usuario cambiar su clave usando GOsa. Para eso, primero
+	elegimos "User" en la caja desplegable y luego marcamos la
+	opción "password". Como queremos que solo puedan cambiar su
+	clave y no la demas seleccionamos también "Apply this acl only
+	for users own entries".
+      </para>
+
+      <graphic fileref="imagenes/creargrupo07.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
+
+      <para>
+	Luego seleccionamos "Finish" y nos regresa al listado de los
+	grupos donde podemos ver el grupo que acabamos de crear.
+      </para>
+
+      <graphic fileref="imagenes/creargrupo08.png" format="PNG" 
+	       scale="55" scalefit="1" align="right"/>
 
     </section>
+
     <section>
       <title>Como Eliminar grupos</title>
       <para>Falta documentar.</para>
     </section>
+
     <section>
       <title>Asignando usuarios a un grupo</title>
       <para>Durante la creación de un grupo se le puede asignar que usuarios van a pertenecer a dicho grupo.</para>
@@ -1298,7 +1415,6 @@
       <title>Quitando a usuarios de un grupo</title>
       <para>Falta documentar.</para>
     </section>
-
 
   </chapter>
 
