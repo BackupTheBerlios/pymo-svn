@@ -1,0 +1,18 @@
+Package: pymoserver
+Version: 0.1
+Maintainer: Ignacio Sanchez <pymoserver@vialibre.org.ar>
+Section: net
+Priority: extra
+Essential: no
+Architecture: i386
+Depends: ldap-server | slapd, ldap-utils, postfix, postfix-ldap, gosa, gosa-schema, cyrus21-imapd, cyrus21-pop3d, cyrus21-admin, libsasl2-modules-ldap, squid, shorewall
+Description: Small and Medium Organizations Server 
+ This is a metapackage to install all the required components to make a fully
+ functional server for small and medium organizations.
+ 
+ This includes:
+ Autentication via LDAP with OpenLDAP
+ User managment with GoSA as web frontend
+ A mailserver implemented with postfix, cyrus, amavis, clamav, spamassassin
+ File server with NFS and with samba as PDC
+ Internet conexion sharing and firewall with shorewall and squid

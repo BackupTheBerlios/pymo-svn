@@ -1,0 +1,44 @@
+# File server
+samba
+libcrypt-smbhash-perl
+smbfs
+nfs-kernel-server
+
+
+cyrus-pop3d-2.2
+cyrus-imapd-2.2
+cyrus-common-2.2
+cyrus-admin-2.2
+avelsieve
+squirrelmail
+squirrelmail-locales
+postfix
+postfix-ldap
+amavisd-new
+spamassassin
+clamav
+
+# Internet
+squid
+squid-cgi
+squidguard
+
+# Authentication
+apache2-mpm-prefork
+libapache2-mod-php5
+gosa
+gosa-schema
+slapd
+shorewall
+ldap-utils
+libnss-ldap
+libpam-ldap
+libsasl2-2
+libsasl2-modules-ldap
+
+# Others
+mc
+openssh-server
+openssh-client
+console-data
+shorewall

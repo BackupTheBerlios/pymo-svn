@@ -1,0 +1,61 @@
+
+d-i netcfg/get_hostname string pymoserver
+d-i netcfg/get_domain string vialibre.org.ar
+
+
+slapd	slapd/password1 password	ldaproot
+slapd	slapd/password2 password	ldaproot
+slapd	slapd/internal/adminpw  password	ldapadmin
+slapd	slapd/allow_ldap_v2	boolean	false
+slapd	slapd/invalid_config	boolean	true
+slapd	shared/organization	string	Pequenia o mediana organizacion
+slapd	slapd/no_configuration	boolean false
+slapd	slapd/migrate_ldbm_to_bdb	boolean	false
+slapd	slapd/move_old_database	boolean	false
+slapd	slapd/suffix_change	boolean	false
+slapd	slapd/dump_database_destdir	string	/var/backups/slapd-VERSION
+slapd	slapd/purge_database	boolean	false
+slapd	slapd/domain	string	vialibre.org.ar
+slapd	slapd/backend	select	BDB
+slapd	slapd/dump_database	select	when needed
+
+libpam-ldap	shared/ldapns/base-dn	string	dc=vialibre,dc=org,dc=ar
+libpam-ldap	shared/ldapns/ldap-server	string	ldap://127.0.0.1/
+libpam-ldap	libpam-ldap/pam_password	select	md5
+libpam-ldap	libpam-ldap/binddn	string 
+libpam-ldap	libpam-ldap/rootbinddn	string 
+libpam-ldap	libpam-ldap/dbrootlogin	boolean false
+libpam-ldap	libpam-ldap/override	boolean true
+libpam-ldap	shared/ldapns/ldap_version	select	3
+libpam-ldap	libpam-ldap/dblogin	boolean false
+
+libnss-ldap	libnss-ldap/dblogin	boolean	false
+libnss-ldap	libnss-ldap/override	boolean	true
+libnss-ldap	shared/ldapns/base-dn	string	dc=vialibre,dc=org,dc=ar
+libnss-ldap	shared/ldapns/ldap-server	string	ldap://127.0.0.1/
+libnss-ldap	libnss-ldap/confperm	boolean	false
+libnss-ldap	libnss-ldap/rootbinddn	string 
+libnss-ldap	shared/ldapns/ldap_version	select	3
+libnss-ldap	libnss-ldap/binddn	string 
+libnss-ldap	libnss-ldap/nsswitch	note	
+libnss-ldap	libnss-ldap/dbrootlogin	boolean	false
+
+postfix	postfix/mailname	string	vialibre.org.ar
+postfix	postfix/tlsmgr_upgrade_warning	boolean	
+postfix	postfix/recipient_delim	string	+
+postfix	postfix/main_mailer_type	select	Internet Site
+postfix	postfix/relayhost	string	
+postfix	postfix/procmail	boolean	false
+postfix	postfix/chattr	boolean	false
+postfix	postfix/root_address	string	
+postfix	postfix/rfc1035_violation	boolean	false
+postfix	postfix/mynetworks	string	127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
+postfix	postfix/destinations	string	vialibre.org.ar
+
+samba	samba/run_mode	select	daemons
+samba-common	samba-common/encrypt_passwords	boolean	true
+samba-common	samba-common/dhcp	boolean	false
+samba-common	samba-common/workgroup	string	vialibre
+samba	samba/generate_smbpasswd	boolean	true
+
+avelsieve	avelsieve/runconfig	boolean	true
